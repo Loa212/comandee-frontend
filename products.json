@@ -1,0 +1,149 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "attributes": {
+        "name": "Pasta al pesto",
+        "content": "Gli **spagetti** al pesto sono un primo piatto che racchiude tutta la bontà del pesto ... e impreziosire piatti di pasta con il suo gusto ricco e inconfondibile.",
+        "meta_description": "spaghetti al pesto",
+        "meta_title": "spaghetti al pesto - primi piatti",
+        "price": 8,
+        "slug": "pasta-al-pesto",
+        "createdAt": "2022-01-02T17:15:28.432Z",
+        "updatedAt": "2022-01-02T17:15:58.160Z",
+        "publishedAt": "2022-01-02T17:15:58.155Z",
+        "image": {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "name": "Spaghetti-al-pesto-52558-3.jpg",
+              "alternativeText": "Spaghetti-al-pesto-52558-3.jpg",
+              "caption": "Spaghetti-al-pesto-52558-3.jpg",
+              "width": 800,
+              "height": 533,
+              "formats": {
+                "thumbnail": {
+                  "name": "thumbnail_Spaghetti-al-pesto-52558-3.jpg",
+                  "hash": "thumbnail_Spaghetti_al_pesto_52558_3_a673e08aa5",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "width": 234,
+                  "height": 156,
+                  "size": 9.97,
+                  "path": null,
+                  "url": "/uploads/thumbnail_Spaghetti_al_pesto_52558_3_a673e08aa5.jpg"
+                },
+                "medium": {
+                  "name": "medium_Spaghetti-al-pesto-52558-3.jpg",
+                  "hash": "medium_Spaghetti_al_pesto_52558_3_a673e08aa5",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "width": 750,
+                  "height": 500,
+                  "size": 59.87,
+                  "path": null,
+                  "url": "/uploads/medium_Spaghetti_al_pesto_52558_3_a673e08aa5.jpg"
+                },
+                "small": {
+                  "name": "small_Spaghetti-al-pesto-52558-3.jpg",
+                  "hash": "small_Spaghetti_al_pesto_52558_3_a673e08aa5",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "width": 500,
+                  "height": 333,
+                  "size": 31.26,
+                  "path": null,
+                  "url": "/uploads/small_Spaghetti_al_pesto_52558_3_a673e08aa5.jpg"
+                }
+              },
+              "hash": "Spaghetti_al_pesto_52558_3_a673e08aa5",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "size": 67.59,
+              "url": "/uploads/Spaghetti_al_pesto_52558_3_a673e08aa5.jpg",
+              "previewUrl": null,
+              "provider": "local",
+              "provider_metadata": null,
+              "createdAt": "2022-01-02T17:13:05.288Z",
+              "updatedAt": "2022-01-02T17:13:05.288Z"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 2,
+      "attributes": {
+        "name": "Coniglio alla ligure",
+        "content": "Come suggerisce il nome stesso, il **coniglio alla Ligur**e è un** secondo piatto** tipico della regione **Liguria** e più precisamente del **Ponente Ligure** ma ormai, al giorno d’oggi è diffuso in tutto il territorio nazionale.",
+        "meta_description": "Coniglio alla ligure",
+        "meta_title": "coniglio alla ligure - secondi piatti",
+        "price": 11,
+        "slug": "coniglio-alla-ligure",
+        "createdAt": "2022-01-02T17:18:40.938Z",
+        "updatedAt": "2022-01-02T17:18:57.026Z",
+        "publishedAt": "2022-01-02T17:18:57.023Z",
+        "image": {
+          "data": {
+            "id": 2,
+            "attributes": {
+              "name": "Coniglio-alla-Ligure_780x520_wm.webp",
+              "alternativeText": "Coniglio-alla-Ligure_780x520_wm.webp",
+              "caption": "Coniglio-alla-Ligure_780x520_wm.webp",
+              "width": 780,
+              "height": 520,
+              "formats": {
+                "thumbnail": {
+                  "name": "thumbnail_Coniglio-alla-Ligure_780x520_wm.webp",
+                  "hash": "thumbnail_Coniglio_alla_Ligure_780x520_wm_2caac3a28a",
+                  "ext": ".webp",
+                  "mime": "image/webp",
+                  "width": 234,
+                  "height": 156,
+                  "size": 9.55,
+                  "path": null,
+                  "url": "/uploads/thumbnail_Coniglio_alla_Ligure_780x520_wm_2caac3a28a.webp"
+                },
+                "medium": {
+                  "name": "medium_Coniglio-alla-Ligure_780x520_wm.webp",
+                  "hash": "medium_Coniglio_alla_Ligure_780x520_wm_2caac3a28a",
+                  "ext": ".webp",
+                  "mime": "image/webp",
+                  "width": 750,
+                  "height": 500,
+                  "size": 57.24,
+                  "path": null,
+                  "url": "/uploads/medium_Coniglio_alla_Ligure_780x520_wm_2caac3a28a.webp"
+                },
+                "small": {
+                  "name": "small_Coniglio-alla-Ligure_780x520_wm.webp",
+                  "hash": "small_Coniglio_alla_Ligure_780x520_wm_2caac3a28a",
+                  "ext": ".webp",
+                  "mime": "image/webp",
+                  "width": 500,
+                  "height": 333,
+                  "size": 31.35,
+                  "path": null,
+                  "url": "/uploads/small_Coniglio_alla_Ligure_780x520_wm_2caac3a28a.webp"
+                }
+              },
+              "hash": "Coniglio_alla_Ligure_780x520_wm_2caac3a28a",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 61.79,
+              "url": "/uploads/Coniglio_alla_Ligure_780x520_wm_2caac3a28a.webp",
+              "previewUrl": null,
+              "provider": "local",
+              "provider_metadata": null,
+              "createdAt": "2022-01-02T17:18:14.189Z",
+              "updatedAt": "2022-01-02T17:18:14.189Z"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": { "page": 1, "pageSize": 25, "pageCount": 1, "total": 2 }
+  }
+}

@@ -49,7 +49,8 @@ export async function getStaticProps({params: {slug}}) {
     return {
       props:{
         product: found.data[0]
-      }
+      },
+      revalidate: 60,
     }
 
   } catch (error) {

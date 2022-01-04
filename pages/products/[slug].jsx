@@ -73,7 +73,7 @@ export async function getStaticPaths() {
         paths: products.data.map(product =>({
           params: {slug: String(product.attributes.slug)}
         })),
-        fallback: false //show 404 if param is not match
+        fallback: 'blocking'
       }
     
   } catch (error) {

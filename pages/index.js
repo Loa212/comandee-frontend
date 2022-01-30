@@ -22,7 +22,7 @@ export default function Home({products}) {
         <div className="pt-12 max-w-xs mx-auto text-lg space-y-6">
           {products.data.map((product) => (
             
-            <div className="bg-gray-100 border border-slate-700 border-opacity-20 rounded-md py-4 px-2" key={product.attributes.name}>
+            <div className="bg-gray-100 border border-slate-700 border-opacity-20 rounded-md py-4 px-2 min-h-[120px]" key={product.attributes.name}>
               <Link href={`/products/${product.attributes.slug}`} passHref>
                 <a>
 

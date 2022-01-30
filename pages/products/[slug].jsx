@@ -1,6 +1,7 @@
 import { fromImageToUrl, API_URL } from "../../utils/urls";
 import Head from "next/head";
-
+import Link from "next/link";
+import {MdArrowBack} from 'react-icons/md';
 
 
 const Product = ({product}) => {
@@ -19,7 +20,17 @@ const Product = ({product}) => {
          }
          <link rel="icon" href="/favicon.ico" />
        </Head>
-       <main className="max-w-sm mx-auto pt-16 space-y-4">
+       <main className="max-w-sm mx-auto px-4 pt-8 space-y-4">
+
+       <Link href={`/`} passHref>
+        <a className="flex items-center">
+        <MdArrowBack className="text-xl mr-1"/> indietro
+        </a>
+       </Link>
+
+
+
+
          <h3 className="text-4xl text-green-700">{product.attributes.name}</h3>
          {/* eslint-disable-next-line @next/next/no-img-element */}
          <img

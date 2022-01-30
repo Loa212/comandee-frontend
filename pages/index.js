@@ -4,6 +4,7 @@ import { fromImageToUrl, API_URL } from "../utils/urls";
 import Link from "next/link";
 
 export default function Home({products}) {
+  console.log(products.data)
   return (
     <div>
       <Head>
@@ -14,33 +15,37 @@ export default function Home({products}) {
 
       <main>
         <h1 className="text-center pt-4 text-green-700 font-bold text-4xl">
-          Products:
+          Menu:
         </h1>
 
-        <hr className="opacity-10 mt-6"/>
 
-        <div className="pt-16 max-w-xs mx-auto text-lg space-y-8">
+        <div className="pt-12 max-w-xs mx-auto text-lg space-y-6">
           {products.data.map((product) => (
-            <div key={product.attributes.name}>
+            
+            <div className="bg-gray-100 border border-slate-700 border-opacity-20 rounded-md py-4 px-2" key={product.attributes.name}>
               <Link href={`/products/${product.attributes.slug}`} passHref>
                 <a>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={fromImageToUrl(product.attributes.image)}
-                    alt="product image"
-                    width={100}
-                    height={100}
-                  />
+
 
                   <div className="flex justify-between">
-                    <p>{product.attributes.name}</p>
-                    <p>
-                      € {product.attributes.price.toFixed(2).replace(".", ",")}
-                    </p>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={fromImageToUrl(product.attributes.image)}
+                      alt="product image"
+                      width={100}
+                      height={100}
+                    />
+                    <div className="text-right flex flex-col justify-between">
+                      <p>{product.attributes.name}</p>
+                      <p>
+                        € {product.attributes.price.toFixed(2).replace(".", ",")}
+                      </p>
+                    </div>
                   </div>
                 </a>
               </Link>
             </div>
+
           ))}
         </div>
       </main>

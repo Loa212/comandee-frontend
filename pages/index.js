@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { fromImageToUrl, API_URL } from "../utils/urls";
-// import Image from "next/image"; TODO
+import Image from "next/image"; 
 import Link from "next/link";
 
 export default function Home({products}) {
@@ -19,22 +19,25 @@ export default function Home({products}) {
         </h1>
 
 
-        <div className="pt-12 max-w-xs mx-auto text-lg space-y-6">
+        <div className="pt-12 pb-9 max-w-xs mx-auto text-lg space-y-6">
           {products.data.map((product) => (
             
-            <div className="bg-gray-100 border border-slate-700 border-opacity-20 rounded-md py-4 px-2 min-h-[120px]" key={product.attributes.name}>
+            <div className="bg-gray-100 border border-slate-700 border-opacity-20 rounded-md py-1 px-2" key={product.attributes.name}>
               <Link href={`/products/${product.attributes.slug}`} passHref>
                 <a>
 
 
-                  <div className="flex justify-between">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={fromImageToUrl(product.attributes.image)}
-                      alt="product image"
-                      width={100}
-                      height={100}
-                    />
+                  <div className="flex justify-between space-x-2">
+                    <div className="w-[120px] min-w-[120px]">
+                      <Image
+                        src={fromImageToUrl(product.attributes.image)}
+                        alt="product image"
+                        width="100%" height="100%" 
+                        layout="responsive" 
+                        objectFit="contain"
+                        
+                      />
+                    </div>                    
                     <div className="text-right flex flex-col justify-between">
                       <p>{product.attributes.name}</p>
                       <p>

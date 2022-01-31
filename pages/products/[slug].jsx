@@ -2,6 +2,7 @@ import { fromImageToUrl, API_URL } from "../../utils/urls";
 import Head from "next/head";
 import Link from "next/link";
 import {MdArrowBack} from 'react-icons/md';
+import Image from "next/image"; 
 
 
 const Product = ({product}) => {
@@ -33,12 +34,16 @@ const Product = ({product}) => {
 
          <h3 className="text-4xl text-green-700">{product.attributes.name}</h3>
          {/* eslint-disable-next-line @next/next/no-img-element */}
-         <img
+         <div className="w-[300px] min-w-[300px]">
+          <Image
            src={fromImageToUrl(product.attributes.image)}
            alt="product image"
-           width={300}
-           height={300}
-         />
+            width="100%" height="100%" 
+            layout="responsive" 
+            objectFit="contain"
+            
+          />
+        </div>                    
          <p className="text-lg">€ {product.attributes.price.toFixed(2).replace(".", ",")}</p>
          <article className="prose">
              {product.attributes.content}

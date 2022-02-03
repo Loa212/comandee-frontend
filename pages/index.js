@@ -3,8 +3,11 @@ import { fromImageToUrl, API_URL } from "../utils/urls";
 import Image from "next/image"; 
 import Link from "next/link";
 
-export default function Home({products}) {
-  console.log(products.data)
+export default function Home({CaffeRapallo}) {
+  // console.log(CaffeRapallo.data[0].attributes.uid)
+  const menus = CaffeRapallo.data[0].attributes.menus.data
+  const cenaCategories = menus[1].attributes.categories.data
+  const hossomaki = cenaCategories[0].attributes.products.data
   return (
     <div>
       <Head>
@@ -20,9 +23,9 @@ export default function Home({products}) {
 
 
         <div className="pt-12 pb-9 max-w-xs mx-auto text-lg space-y-6">
-          {products.data.map((product) => (
+          {hossomaki.map((product) => (
             
-            <div className="bg-gray-100 border border-slate-700 border-opacity-20 rounded-md py-1 px-2" key={product.attributes.name}>
+            <div className=" border border-slate-700 border-opacity-20 rounded-md py-1 px-2" key={product.attributes.name}>
               <Link href={`/products/${product.attributes.slug}`} passHref>
                 <a>
 
@@ -40,9 +43,12 @@ export default function Home({products}) {
                     </div>                    
                     <div className="text-right flex flex-col justify-between">
                       <p>{product.attributes.name}</p>
-                      <p>
-                        € {product.attributes.price.toFixed(2).replace(".", ",")}
-                      </p>
+                      {
+                        product.attributes.price &&
+                        <p>
+                          € {product.attributes.price.toFixed(2).replace(".", ",")}
+                        </p>
+                      }
                     </div>
                   </div>
                 </a>
@@ -59,13 +65,14 @@ export default function Home({products}) {
 
 export async function getStaticProps() {
   //fetch products
-  const products_res = await fetch(`${API_URL}/api/products?populate=image`)
-  const products = await products_res.json()
-  
-  //return products
+  // const products_res = await fetch(`${API_URL}/api/products?populate=image`)
+  //const products = await products_res.json()
+  const CaffeRapallo_res = await fetch(`${API_URL}/api/user-ids?populate[menus][populate][categories][populate][products][populate]=image&filters[uid][$eq]=A2PGPJB08CKXNJZSL0BBLHLX&filters[menus][id][$eq]=2`)
+  const CaffeRapallo = await CaffeRapallo_res.json()
+
   return {
     props:{
-      products
+      CaffeRapallo
     },
     revalidate: 60,
   }

@@ -6,7 +6,6 @@ import { API_URL } from "../../utils/urls";
 export default function Home({ CaffeRapallo }) {
   // console.log(CaffeRapallo.data[0].attributes.uid)
   const menus = CaffeRapallo.data[0].attributes.menus.data;
-  console.log(menus[1].attributes.name)
   const cenaCategories = menus[1].attributes.categories.data;
   return (
     <div className="hoverflow-behavior-contain">

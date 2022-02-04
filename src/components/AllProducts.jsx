@@ -3,6 +3,7 @@ import Link from "next/link";
 import { fromImageToUrl } from "../../utils/urls";
 
 const AllProducts = ({ products }) => {
+  console.log(products)
   return (
     <>
       {products.map((product) => (
@@ -14,10 +15,10 @@ const AllProducts = ({ products }) => {
             <a>
               <div className="flex justify-between space-x-2">
             
-                <div className="">
-                  <p>{product.attributes.name}</p>
-                  <p>{product.attributes.name}</p>
-                 
+                <div className="flexg flex flex-col justify-center space-y-2">
+                  <p className="capitalize">{product.attributes.name}</p>
+                  <p className="text-xs opacity-80">{product.attributes.content}</p>
+                  {product.attributes.allergeni && <p className="text-xs opacity-60">allergeni: {product.attributes.allergeni}</p>}
                 </div>
 
 

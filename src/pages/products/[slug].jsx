@@ -1,4 +1,4 @@
-import { fromImageToUrl, API_URL } from "../../utils/urls";
+import { fromImageToUrl, API_URL } from "../../../utils/urls";
 import Head from "next/head";
 import Link from "next/link";
 import { MdArrowBack } from "react-icons/md";

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Products from "../components/Products";
+import AllProducts from "../components/AllProducts";
 import { API_URL } from "../../utils/urls";
 
 
@@ -27,7 +27,7 @@ export default function Home({ CaffeRapallo }) {
               <h3 className="text-center text-xl font-medium text-rose-700">
                 {category.attributes.name}
               </h3>
-              <Products products={category.attributes.products.data} />
+              <AllProducts products={category.attributes.products.data} />
               
             </div>
           ))}

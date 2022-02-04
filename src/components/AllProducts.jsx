@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { fromImageToUrl } from "../../utils/urls";
 
-const Products = ({ products }) => {
+const AllProducts = ({ products }) => {
   return (
     <>
       {products.map((product) => (
@@ -41,4 +41,4 @@ const Products = ({ products }) => {
   );
 };
 
-export default Products;
+export default AllProducts;

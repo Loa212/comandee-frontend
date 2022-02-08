@@ -3,6 +3,7 @@ import React from "react";
 import { API_URL } from "../../../utils/urls";
 import AllProducts from "../../components/AllProducts";
 import { useRouter } from 'next/router'
+import MenusLayout from "../../shared/MenusLayout";
 
 export default function UserId({ Menus }) {
   const router = useRouter()
@@ -16,8 +17,8 @@ export default function UserId({ Menus }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
-        <h1 className="text-center pt-4 text-green-700 font-bold text-4xl">
+      <MenusLayout>
+        <h1 className="text-center text-green-700 font-bold text-4xl">
           Menu {menus[1].attributes.name}:
         </h1>
 
@@ -31,7 +32,7 @@ export default function UserId({ Menus }) {
             </div>
           ))}
         </div>
-      </div>
+      </MenusLayout>
     </div>
   );
 }

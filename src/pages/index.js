@@ -1,6 +1,7 @@
 import Head from "next/head";
 import AllProducts from "../components/AllProducts";
 import Link from "next/link";
+import QRCode from "qrcode.react";
 
 export default function Home() {
   return (
@@ -17,9 +18,14 @@ export default function Home() {
         </h1>
 
         <div className="pt-12 pb-9 max-w-xs mx-auto text-lg text-center space-y-6">
-          <Link href={`/menus/A2PGPJB08CKXNJZSL0BBLHLX`} passHref>
-            <a>GCR link example</a>
+          <Link  href={`/menus/A2PGPJB08CKXNJZSL0BBLHLX`} passHref>
+            <a className='btn bg-slate-800 text-white rounded-xl'>GCR link example</a>
           </Link>
+        </div>
+        <div className="flex flex-col items-center max-w-xs mx-auto space-y-4 text-center">
+          <p>or scan the QR code:</p>
+
+          <QRCode value="https://comandee-frontend.vercel.app/menus/A2PGPJB08CKXNJZSL0BBLHLX" />
         </div>
       </div>
     </div>

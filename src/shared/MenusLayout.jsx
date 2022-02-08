@@ -5,12 +5,14 @@ const MenusLayout = ({ children }) => {
     <div className="shadow bg-base-200 drawer drawer-end drawer-mobile h-full">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="flex flex-col items-center justify-start drawer-content">
-        <label
-          htmlFor="my-drawer-2"
-          className="my-4 mr-2 text-4xl btn-ghost place-self-end drawer-button lg:hidden"
-        >
-          <MdMenu />
-        </label>
+        <div className="w-full flex justify-end">
+          <label
+            htmlFor="my-drawer-2"
+            className="my-4 mr-2 text-4xl btn-ghost drawer-button lg:hidden"
+          >
+            <MdMenu />
+          </label>
+        </div>
 
         {children}
       </div>
@@ -19,15 +21,17 @@ const MenusLayout = ({ children }) => {
         <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
           <li>
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-            <label
-              htmlFor="my-drawer-2"
-              className=" text-base btn-ghost place-self-end drawer-button lg:hidden"
-            >
+            <div className="w-full flex justify-end">
+                <label
+                htmlFor="my-drawer-2"
+                className=" text-base btn-ghost drawer-button lg:hidden"
+                >
+                    
                 <div className="flex items-center">
-
-                chiudi <MdClose className="text-lg ml-1" /> 
+                    chiudi <MdClose className="text-lg ml-1" />
                 </div>
-            </label>
+                </label>
+            </div>
           </li>
           <h3>Cosa stai cecando?</h3>
           <li>

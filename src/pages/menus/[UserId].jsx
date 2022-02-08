@@ -2,8 +2,10 @@ import Head from "next/head";
 import React from "react";
 import { API_URL } from "../../../utils/urls";
 import AllProducts from "../../components/AllProducts";
+import { useRouter } from 'next/router'
 
 export default function UserId({ Menus }) {
+  const router = useRouter()
   const menus = Menus.data[0].attributes.menus.data;
   const cenaCategories = menus[1].attributes.categories.data;
   return (
@@ -25,7 +27,7 @@ export default function UserId({ Menus }) {
               <h3 className="text-center text-xl font-medium text-rose-700">
                 {category.attributes.name}
               </h3>
-              <AllProducts products={category.attributes.products.data} />
+              <AllProducts UserId={router.query.UserId} products={category.attributes.products.data} />
             </div>
           ))}
         </div>

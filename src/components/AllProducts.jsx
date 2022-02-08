@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { fromImageToUrl } from "../../utils/urls";
 
-const AllProducts = ({ products }) => {
+const AllProducts = ({ UserId, products }) => {
   console.log(products)
   return (
     <>
@@ -11,7 +11,7 @@ const AllProducts = ({ products }) => {
           className="my-4 border border-slate-700 border-opacity-20 rounded-md py-1 px-2"
           key={product.attributes.slug}
         >
-          <Link href={`/products/${product.attributes.slug}`} passHref>
+          <Link href={`/products/${product.attributes.slug}?UserId=${UserId}`} passHref>
             <a>
               <div className="flex justify-between space-x-2">
             

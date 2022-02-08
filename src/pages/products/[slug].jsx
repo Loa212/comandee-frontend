@@ -16,7 +16,7 @@ const Product = ({ product }) => {
         )}
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="max-w-sm mx-auto px-4 pt-8 space-y-4">
+      <div className="max-w-sm mx-auto px-4 pt-8 space-y-4">
         <Link href={`/`} passHref>
           <a className="flex items-center">
             <MdArrowBack className="text-xl mr-1" /> indietro
@@ -41,7 +41,7 @@ const Product = ({ product }) => {
           </p>
         )}
         <article className="prose">{product.attributes.content}</article>
-      </main>
+      </div>
     </div>
   );
 };

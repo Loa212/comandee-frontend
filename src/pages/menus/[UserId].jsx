@@ -1,14 +1,35 @@
 import Head from "next/head";
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { API_URL } from "../../../utils/urls";
 import AllProducts from "../../components/AllProducts";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 import MenusLayout from "../../shared/MenusLayout";
+import MenuContext from "../../state/MenuContext";
 
 export default function UserId({ Menus }) {
-  const router = useRouter()
+  const router = useRouter();
   const menus = Menus.data[0].attributes.menus.data;
   const cenaCategories = menus[1].attributes.categories.data;
+  const { MenuState, setMenuState } = useContext(MenuContext);
+
+  useEffect(() => {
+    if (MenuState.Loaded) {
+      return;
+    } else {
+      const drawerData = [];
+      cenaCategories.forEach((e) =>
+        drawerData.push({
+          title: e.attributes.name,
+          to: e.attributes.slug,
+        })
+      );
+      setMenuState({
+        Loaded: true,
+        data: drawerData,
+      });
+    }
+  }, [MenuState.Loaded, cenaCategories, setMenuState]);
+
   return (
     <div className="hoverflow-behavior-contain">
       <Head>
@@ -25,10 +46,16 @@ export default function UserId({ Menus }) {
         <div className="pt-12 pb-9 max-w-xs mx-auto text-lg space-y-6">
           {cenaCategories.map((category) => (
             <div key={category.attributes.slug}>
-              <h3 className="text-center text-xl font-medium text-rose-700">
+              <h3
+                className="text-center text-xl font-medium text-rose-700"
+                id={category.attributes.slug}
+              >
                 {category.attributes.name}
               </h3>
-              <AllProducts UserId={router.query.UserId} products={category.attributes.products.data} />
+              <AllProducts
+                UserId={router.query.UserId}
+                products={category.attributes.products.data}
+              />
             </div>
           ))}
         </div>
@@ -63,7 +90,6 @@ export async function getStaticProps({ params: { UserId } }) {
     `${API_URL}/api/user-ids?populate[menus][populate][categories][populate][products][populate]=image&filters[uid][$eq]=${UserId}&filters[menus][id][$eq]=2`
   );
   const Menus = await Menus_res.json();
-
 
   return {
     props: {

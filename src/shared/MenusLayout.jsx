@@ -1,13 +1,34 @@
-import { MdClose, MdMenu } from "react-icons/md";
+import { useRouter } from "next/router";
+import { useContext, useState } from "react";
+import { MdArrowForward, MdClose, MdMenu } from "react-icons/md";
+import MenuContext from "../state/MenuContext";
 
 const MenusLayout = ({ children }) => {
+  const { MenuState } = useContext(MenuContext);
+  const router = useRouter();
+
+  const handleClick = (slug) => {
+    const path = router.asPath.split("#")[0];
+    router.push(`${path}/#${slug}`);
+    //close drawer
+    setChecked(false);
+  };
+
+  const [Checked, setChecked] = useState(false);
+
   return (
-    <div className="shadow bg-base-200 drawer drawer-end drawer-mobile h-full">
-      <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+    <div className="shadow drawer drawer-end drawer-mobile h-full">
+      <input
+        onChange={() => setChecked(true)}
+        checked={Checked}
+        id="drawer"
+        type="checkbox"
+        className="drawer-toggle"
+      />
       <div className="flex flex-col items-center justify-start drawer-content">
         <div className="w-full flex justify-end">
           <label
-            htmlFor="my-drawer-2"
+            htmlFor="drawer"
             className="my-4 mr-2 text-4xl btn-ghost drawer-button lg:hidden"
           >
             <MdMenu />
@@ -17,32 +38,32 @@ const MenusLayout = ({ children }) => {
         {children}
       </div>
       <div className="drawer-side">
-        <label htmlFor="my-drawer-2" className="drawer-overlay" />
+        <label htmlFor="drawer" className="drawer-overlay" />
         <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
           <li>
-            <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-            <div className="w-full flex justify-end">
-                <label
-                htmlFor="my-drawer-2"
-                className=" text-base btn-ghost drawer-button lg:hidden"
-                >
-                    
-                <div className="flex items-center">
-                    chiudi <MdClose className="text-lg ml-1" />
-                </div>
-                </label>
-            </div>
+          <div className="w-full flex justify-end">
+            <button onClick={() => setChecked(false)}>
+              <div className="flex items-center">
+                chiudi <MdClose className="text-lg ml-1" />
+              </div>
+            </button>
+          </div>
           </li>
-          <h3>Cosa stai cecando?</h3>
-          <li>
-            <a>Menu Item</a>
-          </li>
-          <li>
-            <a>Menu Item</a>
-          </li>
-          <li>
-            <a>Menu Item</a>
-          </li>
+          <h3 className="text-sm pt-8 pl-4 pb-4">Cosa stai cercando?</h3>
+          {MenuState.data.map((el) => {
+            return (
+              <li key={el.title}>
+                <button className="btn-ghost" onClick={() => handleClick(el.to)}>
+                  <div className="flex items-center space-x-2">
+                  <p className="text-rose-700 font-medium tracking-wide">
+                    {el.title.split(" ")[0]}
+                  </p>
+                  <MdArrowForward className="text-xl text-rose-700"/>
+                  </div>
+                  </button>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>

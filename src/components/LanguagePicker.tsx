@@ -1,6 +1,8 @@
 import { useState } from "react"
 import ReactCountryFlag from "react-country-flag"
 import { MdExpandMore } from "react-icons/md"
+import useOnclickOutside from "react-cool-onclickoutside";
+
 
 interface Lang {
     text: string,
@@ -15,13 +17,14 @@ interface ThisProps {
     setSelectedLanguage: (number) => void
 }
 
-
-
 const LanguagePicker = ({ Langs, SelectedLanguage, setSelectedLanguage }: ThisProps) => {
     const [IsOpen, setIsOpen] = useState(false)
+    const ref = useOnclickOutside(() => {
+        setIsOpen(false);
+    });
     return (
         <>
-            <div className={`dropdown mt-4 ${IsOpen ? 'dropdown-open' : ''}`}>
+            <div ref={ref} className={`dropdown mt-4 ${IsOpen ? 'dropdown-open' : ''}`}>
 
                 <button
                     onClick={() => setIsOpen(!IsOpen)}

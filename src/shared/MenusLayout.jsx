@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useContext, useState } from "react";
-import { MdArrowForward, MdClose, MdMenu } from "react-icons/md";
+import { MdClose, MdMenu } from "react-icons/md";
+import CategoryLink from "../components/CategoryLink.tsx";
 import LanguagePicker from "../components/LanguagePicker.tsx";
 import MenuContext from "../state/MenuContext";
 
@@ -48,7 +49,7 @@ const MenusLayout = ({ children }) => {
         className="drawer-toggle"
       />
       <div className="flex flex-col items-center justify-start drawer-content">
-        <div className="w-full flex justify-between sticky min-h-[64px] bg-white z-50 border-b-2 border-gray-700 border-opacity-5 top-0">
+        <div className="w-full flex justify-between sticky min-h-[64px] bg-white z-50 border-b-2 border-gray-700 border-opacity-5 top-0 mb-6 shadow">
          <LanguagePicker Langs={Languages} SelectedLanguage={SelectedLanguage} setSelectedLanguage={setSelectedLanguage} />
 
           <label
@@ -79,24 +80,8 @@ const MenusLayout = ({ children }) => {
           </li>
         
           <h3 className="text-sm pt-8 pl-4 pb-4">Cosa stai cercando?</h3>
-          <div className="border-b">
-            {MenuState.data.map((el) => {
-              return (
-                <li key={el.title} className="w-full border-t">
-                  <button
-                    className="btn-ghost"
-                    onClick={() => handleClick(el.to)}
-                  >
-                    <div className="flex items-center space-x-2">
-                      <p className="text-rose-700 font-medium tracking-wide min-w-[140px] text-justify">
-                        {el.title.split(" ")[0]}
-                      </p>
-                      <MdArrowForward className="text-xl text-rose-700" />
-                    </div>
-                  </button>
-                </li>
-              );
-            })}
+          <div className="divide-y divide-gray-700 divide-opacity-10 border-y border-gray-700 border-opacity-10">
+            <CategoryLink MenuCategories={MenuState.data} handleClick={handleClick} />
           </div>
         </ul>
       </div>

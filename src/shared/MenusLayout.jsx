@@ -32,17 +32,17 @@ const MenusLayout = ({ children }) => {
     setChecked(false);
   };
 
-  const clickedOutsideDrawer = () => {
-    console.log("shesh");
-    setChecked(false);
-  };
   const [Checked, setChecked] = useState(false);
+
+  const handleDrawerChange = () =>{
+    if(Checked) {setChecked(false)} else {setChecked(true)}
+  }
 
   return (
     <div className="shadow drawer drawer-end drawer-mobile h-full">
       <input
-        onChange={() => setChecked(true)}
-        checked={Checked}
+        onChange={() => handleDrawerChange()}
+        checked={!!Checked}
         id="drawer"
         type="checkbox"
         className="drawer-toggle"
@@ -65,7 +65,6 @@ const MenusLayout = ({ children }) => {
         <label
           htmlFor="drawer"
           className="drawer-overlay drawer-button"
-          onClick={clickedOutsideDrawer}
         />
 
         <ul className="menu overflow-y-auto w-80 bg-base-100 text-base-content">

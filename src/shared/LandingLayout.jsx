@@ -4,7 +4,9 @@ import { useContext, useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
 import CategoryLink from "../components/CategoryLink.tsx";
 import LandingDrawerLinks from "../components/LandingDrawerLinks";
+import LandingFooter from "../components/LandingFooter";
 import LanguagePicker from "../components/LanguagePicker.tsx";
+import Section2 from "../components/Section2";
 import MenuContext from "../state/MenuContext";
 
 const MenusLayout = ({ children }) => {
@@ -29,7 +31,7 @@ const MenusLayout = ({ children }) => {
   };
 
   return (
-    <div className="lg:max-w-5xl lg:mx-auto rounded-lg  h-screen drawer drawer-end border-b-2 border-gray-700 border-opacity-10">
+    <div className="  h-screen drawer drawer-end border-b-2 border-gray-700 border-opacity-10">
       <input
         id="drawer"
         type="checkbox"
@@ -38,7 +40,7 @@ const MenusLayout = ({ children }) => {
         checked={!!Checked}
       />
       <div className="flex flex-col drawer-content ">
-        <div className="w-full navbar border-b-2 lg:border-0 border-gray-700 border-opacity-10">
+        <div className="lg:max-w-5xl lg:mx-auto w-full navbar border-b-2 lg:border-0 border-gray-700 border-opacity-10">
           <div className="flex-1 px-2 mx-2">
             <h1 className="text-[#5F54E2] font-bold text-2xl tracking-wider">
               Comandee
@@ -61,7 +63,16 @@ const MenusLayout = ({ children }) => {
           </div>
         </div>
 
-        {children}
+        <div className="lg:max-w-5xl lg:mx-auto">
+          {children}
+        </div>
+        <div className="hidden lg:block">
+
+        <Section2/>
+        </div>
+
+        <LandingFooter/>
+
       </div>
 
       <div className="drawer-side">

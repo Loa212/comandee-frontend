@@ -3,6 +3,8 @@ import AllProducts from "../components/AllProducts";
 import Link from "next/link";
 import QRCode from "qrcode.react";
 import LandingLayout from '../shared/LandingLayout'
+import Image from "next/image";
+import mokup from '../../public/assets/mokup_v1.png'
 
 export default function Home() {
   return (
@@ -15,8 +17,8 @@ export default function Home() {
 
       <LandingLayout>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mx-4">
-          <div className="col-span-7 space-y-4">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mx-4 lg:mt-16">
+          <div className="lg:col-span-7 space-y-4">
             <h1 className="text-center lg:text-left pt-4 text-gray-600 font-bold text-4xl lg:text-7xl">
               Tutti gli ordini al tavolo con un click
             </h1>
@@ -33,11 +35,10 @@ export default function Home() {
                 </Link>
               </button>
             </div>
-
-
           </div>
-          <div className="col-span-5 bg-blue-600 opacity-30">
 
+          <div className="hidden lg:block lg:col-span-5 ">
+            <Image className="" src={mokup}  alt={'comandee mokup'}/>
           </div>
         </div>
 

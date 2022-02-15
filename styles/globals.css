@@ -6,3 +6,8 @@
 .hoverflow-behavior-contain{
     overscroll-behavior-y: contain;
 }
+
+body{
+    overflow-y: hidden;
+    overflow: contain;
+}

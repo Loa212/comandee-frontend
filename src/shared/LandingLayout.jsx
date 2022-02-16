@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
+import FeaturesSection from "../components/FeaturesSection";
 import LandingDrawerLinks from "../components/LandingDrawerLinks";
 import LandingFooter from "../components/LandingFooter";
 import MailingListCtaSection from "../components/MailingListCtaSection";
@@ -30,7 +31,6 @@ const MenusLayout = ({ children }) => {
 
   return (
     <>
-      <PreNavFeatures />
       <div className="drawer drawer-end border-b-2 border-gray-700 border-opacity-10">
         <input
           id="drawer"
@@ -40,6 +40,7 @@ const MenusLayout = ({ children }) => {
           checked={!!Checked}
         />
         <div className="flex flex-col drawer-content h-full">
+          <PreNavFeatures />
           <div className="lg:max-w-5xl lg:mx-auto w-full navbar border-b-2 lg:border-0 border-gray-700 border-opacity-10">
             <div className="flex-1 px-2 mx-2">
               <h1 className="text-[#5F54E2] font-bold text-2xl tracking-wider">
@@ -66,6 +67,8 @@ const MenusLayout = ({ children }) => {
           <div className="lg:max-w-5xl lg:mx-auto">{children}</div>
 
           <Section2 />
+
+          <FeaturesSection/>
 
           <MailingListCtaSection/>
 

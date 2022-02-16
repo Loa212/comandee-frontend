@@ -27,7 +27,7 @@ export default function Home() {
             </p>
 
             <div className="w-full flex justify-center lg:justify-start">
-              <button className=" btn-secondary bg-[#5F54E2] hover:bg-[#3b31ac] font-bold rounded-xl px-6 py-3">
+              <button className="btn-secondary bg-[#5F54E2] hover:bg-[#3b31ac] font-bold rounded-xl px-6 py-3">
                 <Link href={`/examples/gcr`} passHref>
                   <a>
                     Scopri come

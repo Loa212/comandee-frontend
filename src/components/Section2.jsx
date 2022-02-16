@@ -3,7 +3,7 @@ import whassup from '../../public/assets/whassup.png'
 
 const Section2 = () => {
   return (
-    <div className="my-12 py-9 w-full bg-gray-100 text-slate-700">
+    <div className="my-12 py-9 w-full fifty text-slate-700">
         <div className="max-w-5xl mx-auto">
             <div className="mx-4" >
 

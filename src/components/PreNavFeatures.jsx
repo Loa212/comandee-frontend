@@ -2,7 +2,7 @@ import { MdOutlineInsertChartOutlined, MdOutlineSmartphone, MdPlaylistAddCheck }
 
 const PreNavFeatures = () => {
   return (
-    <div className="hidden lg:block bg-[#F4F5F7] text-[#454545] text-opacity-60 h-9 mb-2 w-full">
+    <div className="hidden static lg:block bg-[#F4F5F7] text-[#454545] text-opacity-60 h-9 py-5 w-full">
     <div className="mx-auto max-w-5xl px-6 h-full flex justify-between items-center">
       <div className="flex space-x-1 items-center">
         <MdOutlineSmartphone className=""/>

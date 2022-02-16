@@ -11,3 +11,7 @@ body{
     overflow-y: hidden;
     overflow: contain;
 }
+
+.fifty{
+    background: linear-gradient(to bottom, #F4F5F7 70%, #fff 30%);
+}

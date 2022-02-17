@@ -17,14 +17,14 @@ const gcr = () => {
         </h1>
 
         <div className="pt-12 pb-9 max-w-xs mx-auto text-lg text-center space-y-6">
-          <Link  href={`/menus/A2PGPJB08CKXNJZSL0BBLHLX`} passHref>
+          <Link  href={`/A2PGPJB08CKXNJZSL0BBLHLX/1`} passHref>
             <a className='btn bg-slate-800 text-white rounded-xl'>GCR link example</a>
           </Link>
         </div>
         <div className="flex flex-col items-center max-w-xs mx-auto space-y-4 text-center">
           <p>or scan the QR code:</p>
 
-          <QRCode value="https://comandee-frontend.vercel.app/menus/A2PGPJB08CKXNJZSL0BBLHLX" />
+          <QRCode value="https://comandee-frontend.vercel.app/A2PGPJB08CKXNJZSL0BBLHLX/1" />
         </div>
       </div>
     </div>

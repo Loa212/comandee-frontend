@@ -10,7 +10,7 @@ const MailingListCtaSection = () => {
         </div>
 
         <div className="lg:col-span-3 space-y-6">
-          <h1 className="text-4xl font-medium">Join 569 more people in the waitlist</h1>
+          <h1 className="lg:text-left tracking-wide text-2xl lg:text-4xl font-medium">Iscriviti alla Newsletter e resta aggiornato su tutte novità di Comandee</h1>
           <div className="form-control">
             <div className="space-y-6 lg:space-y-0 lg:input-group">
               <input

@@ -15,3 +15,9 @@ body{
 .fifty{
     background: linear-gradient(to bottom, #F4F5F7 70%, #fff 30%);
 }
+
+@media only screen and (max-width: 500px) {
+    .fifty{
+        background: linear-gradient(to bottom, #F4F5F7 10%, #fff 90%);
+    }
+  }

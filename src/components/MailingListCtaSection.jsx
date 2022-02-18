@@ -19,9 +19,14 @@ const MailingListCtaSection = () => {
                 className="input input-bordered"
               />
               <button className="btn tracking-wider text-xs">
-                Tienimi aggiornato!
+                Iscriviti
               </button>
+
             </div>
+              <p className="text-gray-300 opacity-60 text-sm mt-2 md:text-left text-center px-8 lg:px-2 lg:pr-10">
+              Cliccando il tasto &quot;iscriviti&quot; accetti 
+              i termini e le condizioni di contatto
+            </p>
           </div>
         </div>
       </div>

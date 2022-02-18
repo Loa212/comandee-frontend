@@ -65,7 +65,7 @@ const LandingFooter = () => {
                 Iscriviti
               </button>
             </div>
-            <p className="text-gray-500 text-sm mt-2 md:text-left text-center">
+            <p className="text-gray-300 opacity-60 text-sm mt-2 md:text-left text-center">
               Cliccando il tasto &quot;iscriviti&quot; accetti 
               i termini e le condizioni di contatto
             </p>

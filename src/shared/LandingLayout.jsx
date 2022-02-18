@@ -39,7 +39,7 @@ const MenusLayout = ({ children }) => {
           onChange={() => handleDrawerChange()}
           checked={!!Checked}
         />
-        <div className="flex flex-col drawer-content h-full">
+        <div className="flex flex-col drawer-content h-full relative">
           <PreNavFeatures />
           <div className="lg:max-w-5xl lg:mx-auto w-full navbar border-b-2 lg:border-0 border-gray-700 border-opacity-10">
             <div className="flex-1 px-2 mx-2">
@@ -58,7 +58,7 @@ const MenusLayout = ({ children }) => {
             </div>
 
             <div className="flex-none hidden lg:block">
-              <ul className="menu horizontal uppercase">
+              <ul className="menu horizontal uppercase space-x-6">
                 <LandingDrawerLinks />
               </ul>
             </div>
@@ -77,7 +77,7 @@ const MenusLayout = ({ children }) => {
 
         <div className="drawer-side">
           <label htmlFor="drawer" className="drawer-overlay" />
-          <ul className="p-4 overflow-y-auto menu w-80 bg-base-100">
+          <ul className="p-4 overflow-y-auto menu w-80 bg-base-100 space-y-4 text-xl">
             <div className="w-full flex justify-end">
               <button onClick={() => setChecked(false)}>
                 <div className="flex items-center">

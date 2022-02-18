@@ -34,7 +34,7 @@ const Section2 = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="grow px-20 py-12 bg-[#F1E4FF]">
+                            <div className="grow px-20 py-12 bg-[#e6d7f7]">
                                 <div className="flex justify-around items-center text-gray-700">
                                     <div className='hidden lg:block h-[96px] w-[96px] rounded-full bg-white'></div>
                                     <div className='lg:max-w-[70%]'>

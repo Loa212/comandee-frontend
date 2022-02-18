@@ -17,7 +17,7 @@ export default function Home() {
 
       <LandingLayout>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mx-4 lg:mt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mx-4 mt-8 lg:mt-16">
           <div className="lg:col-span-7 space-y-4">
             <h1 className="text-center lg:text-left pt-4 text-gray-600 font-bold text-4xl lg:text-7xl">
               Tutti gli ordini al tavolo con un click

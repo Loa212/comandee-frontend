@@ -49,7 +49,9 @@ const LandingDrawerLinks = () => {
       </li>
 
       <li>
+      <Link href={`/Blog`} passHref>
         <a className="rounded-xl">Blog</a>
+      </Link>
       </li>
 
       <li>

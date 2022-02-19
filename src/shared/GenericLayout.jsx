@@ -1,14 +1,13 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
-import FeaturesSection from "../components/FeaturesSection";
 import LandingDrawerLinks from "../components/LandingDrawerLinks";
 import LandingFooter from "../components/LandingFooter";
-import MailingListCtaSection from "../components/MailingListCtaSection";
 import PreNavFeatures from "../components/PreNavFeatures";
-import Section2 from "../components/Section2";
+import Link from "next/link";
 
-const MenusLayout = ({ children }) => {
+
+const GenericLayout = ({ children }) => {
   const router = useRouter();
 
   const handleClick = (slug) => {
@@ -43,9 +42,13 @@ const MenusLayout = ({ children }) => {
           <PreNavFeatures />
           <div className="lg:max-w-5xl lg:mx-auto w-full navbar border-b-2 lg:border-0 border-gray-700 border-opacity-10">
             <div className="flex-1 px-2 mx-2">
+            <Link href={`/`} passHref>
+            <a>
               <h1 className="text-[#5F54E2] font-bold text-2xl tracking-wider">
                 Comandee
               </h1>
+            </a>
+          </Link>
             </div>
 
             <div className="lg:hidden">
@@ -65,12 +68,6 @@ const MenusLayout = ({ children }) => {
           </div>
 
           <div className="lg:max-w-5xl lg:mx-auto">{children}</div>
-
-          <Section2 />
-
-          <FeaturesSection />
-
-          <MailingListCtaSection />
 
           <LandingFooter />
         </div>
@@ -94,4 +91,4 @@ const MenusLayout = ({ children }) => {
   );
 };
 
-export default MenusLayout;
+export default GenericLayout;

@@ -5,7 +5,11 @@ module.exports = {
     "./src/shared/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "Manrope": ["Manrope"],
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/typography'),

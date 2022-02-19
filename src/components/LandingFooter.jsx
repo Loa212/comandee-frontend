@@ -1,10 +1,10 @@
 const LandingFooter = () => {
   return (
     <footer className="bg-[#322C7E] text-gray-300 cursor-pointer body-font mt-16 lg:mt-24">
-      <div className="container px-5 py-24 mx-auto max-w-5xl">
+      <div className="container px-5 pt-16 pb-16 lg:pb-6 mx-auto max-w-5xl">
         <div className="flex flex-wrap md:text-left text-center order-first">
-          <div className="lg:w-1/3 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
+          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 className="title-font font-medium text-white tracking-widest text-xs mb-3">
               CATEGORIES
             </h2>
             <nav className="list-none mb-10">
@@ -22,8 +22,27 @@ const LandingFooter = () => {
               </li>
             </nav>
           </div>
-          <div className="lg:w-1/3 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
+          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 className="title-font font-medium text-white tracking-widest text-xs mb-3">
+              CATEGORIES
+            </h2>
+            <nav className="list-none mb-10">
+              <li>
+                <a className="text-gray-300 cursor-pointer hover:text-white">First Link</a>
+              </li>
+              <li>
+                <a className="text-gray-300 cursor-pointer hover:text-white">Second Link</a>
+              </li>
+              <li>
+                <a className="text-gray-300 cursor-pointer hover:text-white">Third Link</a>
+              </li>
+              <li>
+                <a className="text-gray-300 cursor-pointer hover:text-white">Fourth Link</a>
+              </li>
+            </nav>
+          </div>
+          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 className="title-font font-medium text-white tracking-widest text-xs mb-3">
               CATEGORIES
             </h2>
             <nav className="list-none mb-10">
@@ -42,15 +61,15 @@ const LandingFooter = () => {
             </nav>
           </div>
           
-          <div className="lg:w-1/3 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
+          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 className="title-font font-medium text-white tracking-widest text-xs mb-3">
               ISCRIVITI ALLA NEWSLETTER
             </h2>
             <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
               <div className="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
-                <label
+              <label
                   htmlFor="footer-field"
-                  className="leading-7 text-sm text-gray-300 cursor-pointer"
+                  className=" text-sm text-gray-300 cursor-pointer"
                 >
                   La tua e-mail
                 </label>
@@ -58,6 +77,7 @@ const LandingFooter = () => {
                   type="text"
                   id="footer-field"
                   name="footer-field"
+                  label="la tua mail"
                   className="w-full bg-gray-100 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-purple-300 cursor-pointer focus:border-purple-500 text-base outline-none text-gray-700 focus:text-white py-1 px-3 leading-8 transition-colors duration-300 cursor-pointer ease-in-out"
                 />
               </div>
@@ -76,29 +96,18 @@ const LandingFooter = () => {
       <div className="bg-[#322C7E] border-t border-gray-300 border-opacity-10 ">
         <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col max-w-7xl">
           <a className="flex title-font font-medium items-center md:justify-start justify-center text-white">
-            <svg
-              xmlns="http://www.w3.org/300 cursor-pointer0/svg"
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              className="w-10 h-10 text-white p-2 bg-purple-500 rounded-full"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-            </svg>
-            <span className="ml-3 text-xl">Tailblocks</span>
+            
+            <span className="ml-3 text-xl">Comandee</span>
           </a>
           <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
-            © 2020 Tailblocks —
+            © 2022 Comandee —
             <a
-              href="https://twitter.com/knyttneve"
+              href="https://instagram.com/loa212"
               rel="noopener noreferrer"
               className="text-gray-300 cursor-pointer ml-1"
               target="_blank"
             >
-              @knyttneve
+              @loa212
             </a>
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">

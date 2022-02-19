@@ -11,7 +11,7 @@ const Section2 = () => {
                     <div className="lg:col-span-2">
                         <div className='mb-12'>
                             <h4 className="font-light text-2xl">Come funziona <span className="text-[#5F54E2] ">Comandee</span></h4>
-                            <h3 className="font-black text-4xl opacity-80">in 3 semplici passi</h3>
+                            <h3 className="font-extrabold text-4xl opacity-80">in 3 semplici passi</h3>
                         </div>
 
                         <div className='max-w-[75%] lg:max-w-max'>

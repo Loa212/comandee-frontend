@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    html {
+      font-family: Manrope, system-ui, sans-serif;
+    }
+  }
+
 
 .hoverflow-behavior-contain{
     overscroll-behavior-y: contain;

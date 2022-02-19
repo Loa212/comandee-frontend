@@ -4,44 +4,44 @@ import Link from "next/link";
 const index = () => {
   return (
     <GenericLayout>
-      <div className="mx-4 px-4 text-sm breadcrumbs">
+      <div className="breadcrumbs mx-4 px-4 text-sm">
         <ul>
           <li>
-          <Link href={`/`} passHref>
-            <a>Home</a>
-          </Link>
+            <Link href={`/`} passHref>
+              <a>Home</a>
+            </Link>
           </li>
           <li>
             <a>Blog</a>
           </li>
         </ul>
       </div>
-      <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-wrap -m-4">
+      <section className="body-font text-gray-600">
+        <div className="container mx-auto px-5 py-24">
+          <div className="-m-4 flex flex-wrap">
             <div className="p-4 md:w-1/3">
-              <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="h-full overflow-hidden rounded-lg border-2 border-gray-200 border-opacity-60">
                 <img
-                  className="lg:h-48 md:h-36 w-full object-cover object-center"
+                  className="w-full object-cover object-center md:h-36 lg:h-48"
                   src="https://dummyimage.com/720x400"
                   alt="blog"
                 />
                 <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                  <h2 className="title-font mb-1 text-xs font-medium tracking-widest text-gray-400">
                     CATEGORY
                   </h2>
-                  <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                  <h1 className="title-font mb-3 text-lg font-medium text-gray-900">
                     The Catalyzer
                   </h1>
-                  <p className="leading-relaxed mb-3">
+                  <p className="mb-3 leading-relaxed">
                     Photo booth fam kinfolk cold-pressed sriracha leggings
                     jianbing microdosing tousled waistcoat.
                   </p>
-                  <div className="flex items-center flex-wrap ">
-                    <a className="text-purple-500 inline-flex items-center md:mb-2 lg:mb-0">
+                  <div className="flex flex-wrap items-center ">
+                    <a className="inline-flex items-center text-purple-500 md:mb-2 lg:mb-0">
                       Learn More
                       <svg
-                        className="w-4 h-4 ml-2"
+                        className="ml-2 h-4 w-4"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                         strokeWidth={2}
@@ -53,9 +53,9 @@ const index = () => {
                         <path d="M12 5l7 7-7 7" />
                       </svg>
                     </a>
-                    <span className="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                    <span className="mr-3 ml-auto inline-flex items-center border-r-2 border-gray-200 py-1 pr-3 text-sm leading-none text-gray-400 md:ml-0 lg:ml-auto">
                       <svg
-                        className="w-4 h-4 mr-1"
+                        className="mr-1 h-4 w-4"
                         stroke="currentColor"
                         strokeWidth={2}
                         fill="none"
@@ -68,9 +68,9 @@ const index = () => {
                       </svg>
                       1.2K
                     </span>
-                    <span className="text-gray-400 inline-flex items-center leading-none text-sm">
+                    <span className="inline-flex items-center text-sm leading-none text-gray-400">
                       <svg
-                        className="w-4 h-4 mr-1"
+                        className="mr-1 h-4 w-4"
                         stroke="currentColor"
                         strokeWidth={2}
                         fill="none"
@@ -87,28 +87,28 @@ const index = () => {
               </div>
             </div>
             <div className="p-4 md:w-1/3">
-              <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="h-full overflow-hidden rounded-lg border-2 border-gray-200 border-opacity-60">
                 <img
-                  className="lg:h-48 md:h-36 w-full object-cover object-center"
+                  className="w-full object-cover object-center md:h-36 lg:h-48"
                   src="https://dummyimage.com/721x401"
                   alt="blog"
                 />
                 <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                  <h2 className="title-font mb-1 text-xs font-medium tracking-widest text-gray-400">
                     CATEGORY
                   </h2>
-                  <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                  <h1 className="title-font mb-3 text-lg font-medium text-gray-900">
                     The 400 Blows
                   </h1>
-                  <p className="leading-relaxed mb-3">
+                  <p className="mb-3 leading-relaxed">
                     Photo booth fam kinfolk cold-pressed sriracha leggings
                     jianbing microdosing tousled waistcoat.
                   </p>
-                  <div className="flex items-center flex-wrap">
-                    <a className="text-purple-500 inline-flex items-center md:mb-2 lg:mb-0">
+                  <div className="flex flex-wrap items-center">
+                    <a className="inline-flex items-center text-purple-500 md:mb-2 lg:mb-0">
                       Learn More
                       <svg
-                        className="w-4 h-4 ml-2"
+                        className="ml-2 h-4 w-4"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                         strokeWidth={2}
@@ -120,9 +120,9 @@ const index = () => {
                         <path d="M12 5l7 7-7 7" />
                       </svg>
                     </a>
-                    <span className="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                    <span className="mr-3 ml-auto inline-flex items-center border-r-2 border-gray-200 py-1 pr-3 text-sm leading-none text-gray-400 md:ml-0 lg:ml-auto">
                       <svg
-                        className="w-4 h-4 mr-1"
+                        className="mr-1 h-4 w-4"
                         stroke="currentColor"
                         strokeWidth={2}
                         fill="none"
@@ -135,9 +135,9 @@ const index = () => {
                       </svg>
                       1.2K
                     </span>
-                    <span className="text-gray-400 inline-flex items-center leading-none text-sm">
+                    <span className="inline-flex items-center text-sm leading-none text-gray-400">
                       <svg
-                        className="w-4 h-4 mr-1"
+                        className="mr-1 h-4 w-4"
                         stroke="currentColor"
                         strokeWidth={2}
                         fill="none"
@@ -154,28 +154,28 @@ const index = () => {
               </div>
             </div>
             <div className="p-4 md:w-1/3">
-              <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="h-full overflow-hidden rounded-lg border-2 border-gray-200 border-opacity-60">
                 <img
-                  className="lg:h-48 md:h-36 w-full object-cover object-center"
+                  className="w-full object-cover object-center md:h-36 lg:h-48"
                   src="https://dummyimage.com/722x402"
                   alt="blog"
                 />
                 <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                  <h2 className="title-font mb-1 text-xs font-medium tracking-widest text-gray-400">
                     CATEGORY
                   </h2>
-                  <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                  <h1 className="title-font mb-3 text-lg font-medium text-gray-900">
                     Shooting Stars
                   </h1>
-                  <p className="leading-relaxed mb-3">
+                  <p className="mb-3 leading-relaxed">
                     Photo booth fam kinfolk cold-pressed sriracha leggings
                     jianbing microdosing tousled waistcoat.
                   </p>
-                  <div className="flex items-center flex-wrap ">
-                    <a className="text-purple-500 inline-flex items-center md:mb-2 lg:mb-0">
+                  <div className="flex flex-wrap items-center ">
+                    <a className="inline-flex items-center text-purple-500 md:mb-2 lg:mb-0">
                       Learn More
                       <svg
-                        className="w-4 h-4 ml-2"
+                        className="ml-2 h-4 w-4"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                         strokeWidth={2}
@@ -187,9 +187,9 @@ const index = () => {
                         <path d="M12 5l7 7-7 7" />
                       </svg>
                     </a>
-                    <span className="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                    <span className="mr-3 ml-auto inline-flex items-center border-r-2 border-gray-200 py-1 pr-3 text-sm leading-none text-gray-400 md:ml-0 lg:ml-auto">
                       <svg
-                        className="w-4 h-4 mr-1"
+                        className="mr-1 h-4 w-4"
                         stroke="currentColor"
                         strokeWidth={2}
                         fill="none"
@@ -202,9 +202,9 @@ const index = () => {
                       </svg>
                       1.2K
                     </span>
-                    <span className="text-gray-400 inline-flex items-center leading-none text-sm">
+                    <span className="inline-flex items-center text-sm leading-none text-gray-400">
                       <svg
-                        className="w-4 h-4 mr-1"
+                        className="mr-1 h-4 w-4"
                         stroke="currentColor"
                         strokeWidth={2}
                         fill="none"

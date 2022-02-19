@@ -16,19 +16,19 @@ export default function Home() {
       </Head>
 
       <LandingLayout>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mx-4 mt-8 lg:mt-16">
-          <div className="lg:col-span-7 space-y-4">
-            <h1 className="text-center lg:text-left pt-4 text-gray-600 font-bold text-4xl lg:text-7xl">
+        <div className="mx-4 mt-8 grid grid-cols-1 gap-8 lg:mt-16 lg:grid-cols-12">
+          <div className="space-y-4 lg:col-span-7">
+            <h1 className="pt-4 text-center text-4xl font-bold text-gray-600 lg:text-left lg:text-7xl">
               Tutti gli ordini al tavolo con un click
             </h1>
-            <p className="max-w-sm mx-8 text-center lg:mx-0 lg:text-left text-lg text-gray-600">
+            <p className="mx-8 max-w-sm text-center text-lg text-gray-600 lg:mx-0 lg:text-left">
               Rivoluziona il metodo di ricezione degli ordini eliminando la
               necessità di portare i menu direttamente al cliente o aspettare la
               sua scelta.
             </p>
 
-            <div className="w-full flex justify-center lg:justify-start">
-              <button className="btn-secondary bg-[#5F54E2] hover:bg-[#3b31ac] font-bold rounded-xl px-6 py-3">
+            <div className="flex w-full justify-center lg:justify-start">
+              <button className="btn-secondary rounded-xl bg-[#5F54E2] px-6 py-3 font-bold hover:bg-[#3b31ac]">
                 <Link href={`/examples/gcr`} passHref>
                   <a>Scopri come</a>
                 </Link>
@@ -36,7 +36,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hidden lg:block lg:col-span-5 ">
+          <div className="hidden lg:col-span-5 lg:block ">
             <Image className="" src={mokup} alt={"comandee mokup"} />
           </div>
         </div>

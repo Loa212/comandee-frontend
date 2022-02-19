@@ -1,6 +1,6 @@
-import Head from "next/head"
-import Link from "next/link"
-import QRCode from "qrcode.react"
+import Head from "next/head";
+import Link from "next/link";
+import QRCode from "qrcode.react";
 
 const gcr = () => {
   return (
@@ -12,23 +12,25 @@ const gcr = () => {
       </Head>
 
       <div>
-        <h1 className="text-center pt-4 text-green-700 font-bold text-4xl">
+        <h1 className="pt-4 text-center text-4xl font-bold text-green-700">
           Test
         </h1>
 
-        <div className="pt-12 pb-9 max-w-xs mx-auto text-lg text-center space-y-6">
-          <Link  href={`/A2PGPJB08CKXNJZSL0BBLHLX/1`} passHref>
-            <a className='btn bg-slate-800 text-white rounded-xl'>GCR link example</a>
+        <div className="mx-auto max-w-xs space-y-6 pt-12 pb-9 text-center text-lg">
+          <Link href={`/A2PGPJB08CKXNJZSL0BBLHLX/1`} passHref>
+            <a className="btn rounded-xl bg-slate-800 text-white">
+              GCR link example
+            </a>
           </Link>
         </div>
-        <div className="flex flex-col items-center max-w-xs mx-auto space-y-4 text-center">
+        <div className="mx-auto flex max-w-xs flex-col items-center space-y-4 text-center">
           <p>or scan the QR code:</p>
 
           <QRCode value="https://comandee-frontend.vercel.app/A2PGPJB08CKXNJZSL0BBLHLX/1" />
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default gcr
+export default gcr;

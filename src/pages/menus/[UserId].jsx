@@ -39,21 +39,26 @@ export default function UserId({ Menus }) {
       </Head>
 
       <MenusLayout>
-        <div className="text-center space-y-4">
-          <h1 className=" text-green-700 font-bold text-4xl">
+        <div className="space-y-4 text-center">
+          <h1 className=" text-4xl font-bold text-green-700">
             Menu {menus[1].attributes.name}:
           </h1>
 
-          <p className="text-xl font-medium">{menus[1].attributes?.menuDescription.split('_')[0]}</p>
+          <p className="text-xl font-medium">
+            {menus[1].attributes?.menuDescription.split("_")[0]}
+          </p>
 
           <div className="space-y-1">
-            <p className="text-sm">{menus[1].attributes?.menuDescription.split('_')[1]}</p>
-            <p className="text-sm">{menus[1].attributes?.menuDescription.split('_')[2]}</p>
+            <p className="text-sm">
+              {menus[1].attributes?.menuDescription.split("_")[1]}
+            </p>
+            <p className="text-sm">
+              {menus[1].attributes?.menuDescription.split("_")[2]}
+            </p>
           </div>
-
         </div>
 
-        <div className="pt-8 pb-9 max-w-xs mx-auto text-lg space-y-6">
+        <div className="mx-auto max-w-xs space-y-6 pt-8 pb-9 text-lg">
           {cenaCategories.map((category) => (
             <div key={category.attributes.slug}>
               <h3

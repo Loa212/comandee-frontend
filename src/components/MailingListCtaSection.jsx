@@ -3,29 +3,29 @@ import Illustration from "../../public/assets/Email_Illustration.png";
 
 const MailingListCtaSection = () => {
   return (
-    <div className="my-6 py-0 w-full max-w-5xl mx-auto ">
-      <div className="mx-4 lg:mx-16 px-4 text-center lg:text-justify lg:px-32 py-10 rounded-2xl shadow-lg text-white  bg-[#8C30F5] grid lg:grid-cols-5 items-center">
+    <div className="my-6 mx-auto w-full max-w-5xl py-0 ">
+      <div className="mx-4 grid items-center rounded-2xl bg-[#8C30F5] px-4 py-10 text-center text-white shadow-lg  lg:mx-16 lg:grid-cols-5 lg:px-32 lg:text-justify">
         <div className="lg:col-span-2">
           <Image src={Illustration} alt="mailing-list-illustration" />
         </div>
 
-        <div className="lg:col-span-3 space-y-6">
-          <h1 className="lg:text-left tracking-wide text-2xl lg:text-4xl font-medium">Iscriviti alla Newsletter e resta aggiornato su tutte novità di Comandee</h1>
+        <div className="space-y-6 lg:col-span-3">
+          <h1 className="text-2xl font-medium tracking-wide lg:text-left lg:text-4xl">
+            Iscriviti alla Newsletter e resta aggiornato su tutte novità di
+            Comandee
+          </h1>
           <div className="form-control">
-            <div className="space-y-6 lg:space-y-0 lg:input-group">
+            <div className="lg:input-group space-y-6 lg:space-y-0">
               <input
                 type="text"
                 placeholder="la tua e-mail di lavoro"
                 className="input input-bordered"
               />
-              <button className="btn tracking-wider text-xs">
-                Iscriviti
-              </button>
-
+              <button className="btn text-xs tracking-wider">Iscriviti</button>
             </div>
-              <p className="text-gray-300 opacity-60 text-sm mt-2 md:text-left text-center px-8 lg:px-2 lg:pr-10">
-              Cliccando il tasto &quot;iscriviti&quot; accetti 
-              i termini e le condizioni di contatto
+            <p className="mt-2 px-8 text-center text-sm text-gray-300 opacity-60 md:text-left lg:px-2 lg:pr-10">
+              Cliccando il tasto &quot;iscriviti&quot; accetti i termini e le
+              condizioni di contatto
             </p>
           </div>
         </div>

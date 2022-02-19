@@ -4,7 +4,11 @@ const AllProducts = ({ UserId, products }) => {
   return (
     <>
       {products.map((product) => (
-        <Product key={product.attributes.slug} product={product} UserId={UserId}/>
+        <Product
+          key={product.attributes.slug}
+          product={product}
+          UserId={UserId}
+        />
       ))}
     </>
   );

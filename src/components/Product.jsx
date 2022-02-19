@@ -21,7 +21,7 @@ const Product = ({ product, UserId }) => {
               )}
             </div>
 
-            <div className="grow-0 w-[120px] min-w-[120px]">
+            <div className="w-[120px] min-w-[120px] grow-0">
               <Image
                 src={fromImageToUrl(product.attributes.image)}
                 alt="product image"

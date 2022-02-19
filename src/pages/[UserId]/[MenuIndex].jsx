@@ -8,7 +8,7 @@ import MenuContext from "../../state/MenuContext";
 
 const Menu = ({ Menus, MenuIndex }) => {
   const router = useRouter();
-  console.log(Menus)
+  console.log(Menus);
   const menus = Menus.data[0].attributes.menus.data;
   const cenaCategories = menus[1].attributes.categories.data;
   const { MenuState, setMenuState } = useContext(MenuContext);
@@ -40,8 +40,8 @@ const Menu = ({ Menus, MenuIndex }) => {
       </Head>
 
       <MenusLayout>
-        <div className="text-center space-y-4">
-          <h1 className=" text-green-700 font-bold text-4xl">
+        <div className="space-y-4 text-center">
+          <h1 className=" text-4xl font-bold text-green-700">
             Menu {menus[MenuIndex].attributes.name}:
           </h1>
 
@@ -59,7 +59,7 @@ const Menu = ({ Menus, MenuIndex }) => {
           </div>
         </div>
 
-        <div className="pt-8 pb-9 max-w-xs mx-auto text-lg space-y-6">
+        <div className="mx-auto max-w-xs space-y-6 pt-8 pb-9 text-lg">
           {cenaCategories.map((category) => (
             <div key={category.attributes.slug}>
               <h3
@@ -89,14 +89,16 @@ export async function getStaticPaths() {
     const users = await users_res.json();
     //return them to NextJs app
 
-    const paths = users.data.map((user) =>
-    (user.attributes.menus.data.map((menu, index) => ({
-      params: {
-        UserId: String(user.attributes.uid),
-        MenuIndex: String(index),
-      },
-    })))
-  ).flat();
+    const paths = users.data
+      .map((user) =>
+        user.attributes.menus.data.map((menu, index) => ({
+          params: {
+            UserId: String(user.attributes.uid),
+            MenuIndex: String(index),
+          },
+        }))
+      )
+      .flat();
 
     return {
       paths,
@@ -121,7 +123,7 @@ export async function getStaticProps({ params: { UserId, MenuIndex } }) {
   return {
     props: {
       Menus,
-      MenuIndex
+      MenuIndex,
     },
     revalidate: 60,
   };

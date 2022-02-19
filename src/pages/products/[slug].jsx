@@ -4,12 +4,11 @@ import Head from "next/head";
 import Link from "next/link";
 import { MdArrowBack } from "react-icons/md";
 import Image from "next/image";
-import { useRouter } from 'next/router'
-
+import { useRouter } from "next/router";
 
 const Product = ({ product }) => {
-  console.log(product)
-  const router = useRouter()
+  console.log(product);
+  const router = useRouter();
   return (
     <div>
       <Head>
@@ -21,10 +20,10 @@ const Product = ({ product }) => {
         )}
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="max-w-sm mx-auto px-4 pt-8 space-y-4">
+      <div className="mx-auto max-w-sm space-y-4 px-4 pt-8">
         <Link href={`/menus/${router.query.UserId}`} passHref>
           <a className="flex items-center">
-            <MdArrowBack className="text-xl mr-1" /> indietro
+            <MdArrowBack className="mr-1 text-xl" /> indietro
           </a>
         </Link>
 

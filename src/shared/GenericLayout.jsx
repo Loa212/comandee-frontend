@@ -6,7 +6,6 @@ import LandingFooter from "../components/LandingFooter";
 import PreNavFeatures from "../components/PreNavFeatures";
 import Link from "next/link";
 
-
 const GenericLayout = ({ children }) => {
   const router = useRouter();
 
@@ -38,47 +37,47 @@ const GenericLayout = ({ children }) => {
           onChange={() => handleDrawerChange()}
           checked={!!Checked}
         />
-        <div className="flex flex-col drawer-content h-full relative">
+        <div className="drawer-content relative flex h-full flex-col">
           <PreNavFeatures />
-          <div className="lg:max-w-5xl lg:mx-auto w-full navbar border-b-2 lg:border-0 border-gray-700 border-opacity-10">
-            <div className="flex-1 px-2 mx-2">
-            <Link href={`/`} passHref>
-            <a>
-              <h1 className="text-[#5F54E2] font-bold text-2xl tracking-wider">
-                Comandee
-              </h1>
-            </a>
-          </Link>
+          <div className="navbar w-full border-b-2 border-gray-700 border-opacity-10 lg:mx-auto lg:max-w-5xl lg:border-0">
+            <div className="mx-2 flex-1 px-2">
+              <Link href={`/`} passHref>
+                <a>
+                  <h1 className="text-2xl font-bold tracking-wider text-[#5F54E2]">
+                    Comandee
+                  </h1>
+                </a>
+              </Link>
             </div>
 
             <div className="lg:hidden">
               <label
                 htmlFor="drawer"
-                className="mt-4 mr-2 mb-2 text-4xl btn-ghost drawer-button lg:hidden"
+                className="btn-ghost drawer-button mt-4 mr-2 mb-2 text-4xl lg:hidden"
               >
                 <MdMenu />
               </label>
             </div>
 
-            <div className="flex-none hidden lg:block">
-              <ul className="menu horizontal uppercase space-x-6">
+            <div className="hidden flex-none lg:block">
+              <ul className="menu horizontal space-x-6 uppercase">
                 <LandingDrawerLinks />
               </ul>
             </div>
           </div>
 
-          <div className="lg:max-w-5xl lg:mx-auto">{children}</div>
+          <div className="lg:mx-auto lg:max-w-5xl">{children}</div>
 
           <LandingFooter />
         </div>
 
         <div className="drawer-side">
           <label htmlFor="drawer" className="drawer-overlay" />
-          <ul className="p-4 overflow-y-auto menu w-80 bg-base-100 space-y-4 text-xl">
-            <div className="w-full flex justify-end">
+          <ul className="menu bg-base-100 w-80 space-y-4 overflow-y-auto p-4 text-xl">
+            <div className="flex w-full justify-end">
               <button onClick={() => setChecked(false)}>
                 <div className="flex items-center">
-                  chiudi <MdClose className="text-lg ml-1" />
+                  chiudi <MdClose className="ml-1 text-lg" />
                 </div>
               </button>
             </div>

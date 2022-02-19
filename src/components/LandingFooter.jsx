@@ -1,75 +1,99 @@
 const LandingFooter = () => {
   return (
-    <footer className="bg-[#322C7E] text-gray-300 cursor-pointer body-font mt-16 lg:mt-24">
-      <div className="container px-5 pt-16 pb-16 lg:pb-6 mx-auto max-w-5xl">
-        <div className="flex flex-wrap md:text-left text-center order-first">
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-white tracking-widest text-xs mb-3">
+    <footer className="body-font mt-16 cursor-pointer bg-[#322C7E] text-gray-300 lg:mt-24">
+      <div className="container mx-auto max-w-5xl px-5 pt-16 pb-16 lg:pb-6">
+        <div className="order-first flex flex-wrap text-center md:text-left">
+          <div className="w-full px-4 md:w-1/2 lg:w-1/4">
+            <h2 className="title-font mb-3 text-xs font-medium tracking-widest text-white">
               CATEGORIES
             </h2>
-            <nav className="list-none mb-10">
+            <nav className="mb-10 list-none">
               <li>
-                <a className="text-gray-300 cursor-pointer hover:text-white">First Link</a>
+                <a className="cursor-pointer text-gray-300 hover:text-white">
+                  First Link
+                </a>
               </li>
               <li>
-                <a className="text-gray-300 cursor-pointer hover:text-white">Second Link</a>
+                <a className="cursor-pointer text-gray-300 hover:text-white">
+                  Second Link
+                </a>
               </li>
               <li>
-                <a className="text-gray-300 cursor-pointer hover:text-white">Third Link</a>
+                <a className="cursor-pointer text-gray-300 hover:text-white">
+                  Third Link
+                </a>
               </li>
               <li>
-                <a className="text-gray-300 cursor-pointer hover:text-white">Fourth Link</a>
+                <a className="cursor-pointer text-gray-300 hover:text-white">
+                  Fourth Link
+                </a>
               </li>
             </nav>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-white tracking-widest text-xs mb-3">
+          <div className="w-full px-4 md:w-1/2 lg:w-1/4">
+            <h2 className="title-font mb-3 text-xs font-medium tracking-widest text-white">
               CATEGORIES
             </h2>
-            <nav className="list-none mb-10">
+            <nav className="mb-10 list-none">
               <li>
-                <a className="text-gray-300 cursor-pointer hover:text-white">First Link</a>
+                <a className="cursor-pointer text-gray-300 hover:text-white">
+                  First Link
+                </a>
               </li>
               <li>
-                <a className="text-gray-300 cursor-pointer hover:text-white">Second Link</a>
+                <a className="cursor-pointer text-gray-300 hover:text-white">
+                  Second Link
+                </a>
               </li>
               <li>
-                <a className="text-gray-300 cursor-pointer hover:text-white">Third Link</a>
+                <a className="cursor-pointer text-gray-300 hover:text-white">
+                  Third Link
+                </a>
               </li>
               <li>
-                <a className="text-gray-300 cursor-pointer hover:text-white">Fourth Link</a>
+                <a className="cursor-pointer text-gray-300 hover:text-white">
+                  Fourth Link
+                </a>
               </li>
             </nav>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-white tracking-widest text-xs mb-3">
+          <div className="w-full px-4 md:w-1/2 lg:w-1/4">
+            <h2 className="title-font mb-3 text-xs font-medium tracking-widest text-white">
               CATEGORIES
             </h2>
-            <nav className="list-none mb-10">
+            <nav className="mb-10 list-none">
               <li>
-                <a className="text-gray-300 cursor-pointer hover:text-white">First Link</a>
+                <a className="cursor-pointer text-gray-300 hover:text-white">
+                  First Link
+                </a>
               </li>
               <li>
-                <a className="text-gray-300 cursor-pointer hover:text-white">Second Link</a>
+                <a className="cursor-pointer text-gray-300 hover:text-white">
+                  Second Link
+                </a>
               </li>
               <li>
-                <a className="text-gray-300 cursor-pointer hover:text-white">Third Link</a>
+                <a className="cursor-pointer text-gray-300 hover:text-white">
+                  Third Link
+                </a>
               </li>
               <li>
-                <a className="text-gray-300 cursor-pointer hover:text-white">Fourth Link</a>
+                <a className="cursor-pointer text-gray-300 hover:text-white">
+                  Fourth Link
+                </a>
               </li>
             </nav>
           </div>
-          
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-white tracking-widest text-xs mb-3">
+
+          <div className="w-full px-4 md:w-1/2 lg:w-1/4">
+            <h2 className="title-font mb-3 text-xs font-medium tracking-widest text-white">
               ISCRIVITI ALLA NEWSLETTER
             </h2>
-            <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
-              <div className="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
-              <label
+            <div className="flex flex-wrap items-end justify-center md:flex-nowrap md:justify-start lg:flex-wrap xl:flex-nowrap">
+              <div className="relative mr-2 w-40 sm:mr-4 sm:w-auto lg:mr-0 xl:mr-4">
+                <label
                   htmlFor="footer-field"
-                  className=" text-sm text-gray-300 cursor-pointer"
+                  className=" cursor-pointer text-sm text-gray-300"
                 >
                   La tua e-mail
                 </label>
@@ -78,46 +102,45 @@ const LandingFooter = () => {
                   id="footer-field"
                   name="footer-field"
                   label="la tua mail"
-                  className="w-full bg-gray-100 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-purple-300 cursor-pointer focus:border-purple-500 text-base outline-none text-gray-700 focus:text-white py-1 px-3 leading-8 transition-colors duration-300 cursor-pointer ease-in-out"
+                  className="w-full cursor-pointer cursor-pointer rounded border border-gray-300 bg-gray-100 py-1 px-3 text-base leading-8 text-gray-700 outline-none transition-colors duration-300 ease-in-out focus:border-purple-500 focus:bg-transparent focus:text-white focus:ring-2 focus:ring-purple-300"
                 />
               </div>
-              <button className="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded">
+              <button className="inline-flex flex-shrink-0 rounded border-0 bg-purple-500 py-2 px-6 text-white hover:bg-purple-600 focus:outline-none lg:mt-2 xl:mt-0">
                 Iscriviti
               </button>
             </div>
-            <p className="text-gray-300 opacity-60 text-sm mt-2 md:text-left text-center">
-              Cliccando il tasto &quot;iscriviti&quot; accetti 
-              i termini e le condizioni di contatto
+            <p className="mt-2 text-center text-sm text-gray-300 opacity-60 md:text-left">
+              Cliccando il tasto &quot;iscriviti&quot; accetti i termini e le
+              condizioni di contatto
             </p>
           </div>
         </div>
       </div>
       {/* divider */}
-      <div className="bg-[#322C7E] border-t border-gray-300 border-opacity-10 ">
-        <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col max-w-7xl">
-          <a className="flex title-font font-medium items-center md:justify-start justify-center text-white">
-            
+      <div className="border-t border-gray-300 border-opacity-10 bg-[#322C7E] ">
+        <div className="container mx-auto flex max-w-7xl flex-col items-center px-5 py-6 sm:flex-row">
+          <a className="title-font flex items-center justify-center font-medium text-white md:justify-start">
             <span className="ml-3 text-xl">Comandee</span>
           </a>
-          <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
+          <p className="mt-4 text-sm text-gray-500 sm:ml-6 sm:mt-0">
             © 2022 Comandee —
             <a
               href="https://instagram.com/loa212"
               rel="noopener noreferrer"
-              className="text-gray-300 cursor-pointer ml-1"
+              className="ml-1 cursor-pointer text-gray-300"
               target="_blank"
             >
               @loa212
             </a>
           </p>
-          <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+          <span className="mt-4 inline-flex justify-center sm:ml-auto sm:mt-0 sm:justify-start">
             <a className="text-gray-500">
               <svg
                 fill="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                className="w-5 h-5"
+                className="h-5 w-5"
                 viewBox="0 0 24 24"
               >
                 <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
@@ -129,7 +152,7 @@ const LandingFooter = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                className="w-5 h-5"
+                className="h-5 w-5"
                 viewBox="0 0 24 24"
               >
                 <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
@@ -142,7 +165,7 @@ const LandingFooter = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                className="w-5 h-5"
+                className="h-5 w-5"
                 viewBox="0 0 24 24"
               >
                 <rect width={20} height={20} x={2} y={2} rx={5} ry={5} />
@@ -156,7 +179,7 @@ const LandingFooter = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={0}
-                className="w-5 h-5"
+                className="h-5 w-5"
                 viewBox="0 0 24 24"
               >
                 <path

@@ -74,7 +74,7 @@ const LandingDrawerLinks = () => {
       </li>
 
       <li>
-        <button className="btn-secondary max-w-[200px] rounded-xl bg-[#5F54E2] px-6 py-3 font-bold hover:bg-[#3b31ac] lg:max-w-max ">
+        <button className="btn-secondary  rounded-xl bg-[#5F54E2] px-6 py-3 font-bold hover:bg-[#3b31ac] lg:max-w-max ">
           <Link href={`/examples/gcr`} passHref>
             <a className="flex items-center text-white">
               GCR example

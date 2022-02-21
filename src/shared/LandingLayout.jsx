@@ -1,12 +1,8 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
-import FeaturesSection from "../components/FeaturesSection";
+import Drawer from "../components/Drawer";
 import LandingDrawerLinks from "../components/LandingDrawerLinks";
-import LandingFooter from "../components/LandingFooter";
-import MailingListCtaSection from "../components/MailingListCtaSection";
-import PreNavFeatures from "../components/PreNavFeatures";
-import Section2 from "../components/Section2";
 
 const MenusLayout = ({ children }) => {
   const router = useRouter();
@@ -20,6 +16,8 @@ const MenusLayout = ({ children }) => {
 
   const [Checked, setChecked] = useState(false);
 
+  const [DrawerOpen, setDrawerOpen] = useState(false);
+
   const handleDrawerChange = () => {
     console.log("menuclick");
     if (Checked) {
@@ -30,67 +28,50 @@ const MenusLayout = ({ children }) => {
   };
 
   return (
-    <>
-      <div className="drawer drawer-end border-b-2 border-gray-700 border-opacity-10">
-        <input
-          id="drawer"
-          type="checkbox"
-          className="drawer-toggle"
-          onChange={() => handleDrawerChange()}
-          checked={!!Checked}
-        />
-        <div className="drawer-content relative flex h-full flex-col">
-          <PreNavFeatures />
-          <div className="navbar w-full border-b-2 border-gray-700 border-opacity-10 lg:mx-auto lg:max-w-5xl lg:border-0">
-            <div className="mx-2 flex-1 px-2">
-              <h1 className="text-2xl font-bold tracking-wider text-[#5F54E2]">
-                Comandee
-              </h1>
-            </div>
-
-            <div className="lg:hidden">
-              <label
-                htmlFor="drawer"
-                className="btn-ghost drawer-button mt-4 mr-2 mb-2 text-4xl lg:hidden"
-              >
-                <MdMenu />
-              </label>
-            </div>
-
-            <div className="hidden flex-none lg:block">
-              <ul className="menu horizontal space-x-6 uppercase">
-                <LandingDrawerLinks />
-              </ul>
-            </div>
+    <div
+      className={`border-b-2 border-gray-700 border-opacity-10 ${
+        DrawerOpen ? "fixed " : ""
+      } `}
+    >
+      <Drawer DrawerOpen={DrawerOpen} setDrawerOpen={setDrawerOpen}>
+        <ul className="bg-base-100 w-[85vw] space-y-6 py-4 px-6 text-xl">
+          <div className="mb-10 flex w-full justify-end">
+            <button onClick={() => setDrawerOpen(false)}>
+              <div className="flex items-center">
+                chiudi <MdClose className="ml-1 text-lg" />
+              </div>
+            </button>
           </div>
 
-          <div className="lg:mx-auto lg:max-w-5xl">{children}</div>
+          <LandingDrawerLinks />
+        </ul>
+      </Drawer>
 
-          <Section2 />
-
-          <FeaturesSection />
-
-          <MailingListCtaSection />
-
-          <LandingFooter />
+      <div className="navbar w-full border-b-2 border-gray-700 border-opacity-10 lg:mx-auto lg:max-w-5xl lg:border-0">
+        <div className="mx-2 flex-1 px-2">
+          <h1 className="text-2xl font-bold tracking-wider text-[#5F54E2]">
+            Comandee
+          </h1>
         </div>
 
-        <div className="drawer-side">
-          <label htmlFor="drawer" className="drawer-overlay" />
-          <ul className="menu bg-base-100 w-80 space-y-4 overflow-y-auto p-4 text-xl">
-            <div className="flex w-full justify-end">
-              <button onClick={() => setChecked(false)}>
-                <div className="flex items-center">
-                  chiudi <MdClose className="ml-1 text-lg" />
-                </div>
-              </button>
-            </div>
+        <div className="lg:hidden">
+          <button
+            className="btn-ghost drawer-button mt-4 mr-2 mb-2 text-4xl lg:hidden"
+            onClick={() => setDrawerOpen(true)}
+          >
+            <MdMenu />
+          </button>
+        </div>
 
+        <div className="hidden flex-none lg:block">
+          <ul className="flex items-center space-x-16 uppercase">
             <LandingDrawerLinks />
           </ul>
         </div>
       </div>
-    </>
+
+      {children}
+    </div>
   );
 };
 

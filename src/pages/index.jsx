@@ -5,6 +5,11 @@ import QRCode from "qrcode.react";
 import LandingLayout from "../shared/LandingLayout";
 import Image from "next/image";
 import mokup from "../../public/assets/mokup_v1.png";
+import Section2 from "../components/Section2";
+import FeaturesSection from "../components/FeaturesSection";
+import MailingListCtaSection from "../components/MailingListCtaSection";
+import LandingFooter from "../components/LandingFooter";
+import PreNavFeatures from "../components/PreNavFeatures";
 
 export default function Home() {
   return (
@@ -15,31 +20,42 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <PreNavFeatures />
       <LandingLayout>
-        <div className="mx-4 mt-8 grid grid-cols-1 gap-8 lg:mt-16 lg:grid-cols-12">
-          <div className="space-y-4 lg:col-span-7">
-            <h1 className="pt-4 text-center text-4xl font-bold text-gray-600 lg:text-left lg:text-7xl">
-              Tutti gli ordini al tavolo con un click
-            </h1>
-            <p className="mx-8 max-w-sm text-center text-lg text-gray-600 lg:mx-0 lg:text-left">
-              Rivoluziona il metodo di ricezione degli ordini eliminando la
-              necessità di portare i menu direttamente al cliente o aspettare la
-              sua scelta.
-            </p>
+        <div className="lg:mx-auto lg:max-w-5xl">
+          <div className="mx-4 mt-8 grid grid-cols-1 gap-8 lg:mt-16 lg:grid-cols-12">
+            <div className="space-y-4 lg:col-span-7">
+              <h1 className="pt-4 text-center text-4xl font-bold text-gray-600 lg:text-left lg:text-7xl">
+                Tutti gli ordini al tavolo con un click
+              </h1>
+              <p className="mx-8 max-w-sm text-center text-lg text-gray-600 lg:mx-0 lg:text-left">
+                Rivoluziona il metodo di ricezione degli ordini eliminando la
+                necessità di portare i menu direttamente al cliente o aspettare
+                la sua scelta.
+              </p>
 
-            <div className="flex w-full justify-center lg:justify-start">
-              <button className="btn-secondary rounded-xl bg-[#5F54E2] px-6 py-3 font-bold hover:bg-[#3b31ac]">
-                <Link href={`/examples/gcr`} passHref>
-                  <a>Scopri come</a>
-                </Link>
-              </button>
+              <div className="flex w-full justify-center lg:justify-start">
+                <button className="btn-secondary rounded-xl bg-[#5F54E2] px-6 py-3 font-bold hover:bg-[#3b31ac]">
+                  <Link href={`/examples/gcr`} passHref>
+                    <a>Scopri come</a>
+                  </Link>
+                </button>
+              </div>
+            </div>
+
+            <div className="hidden lg:col-span-5 lg:block ">
+              <Image className="" src={mokup} alt={"comandee mokup"} />
             </div>
           </div>
-
-          <div className="hidden lg:col-span-5 lg:block ">
-            <Image className="" src={mokup} alt={"comandee mokup"} />
-          </div>
         </div>
+
+        <Section2 />
+
+        <FeaturesSection />
+
+        <MailingListCtaSection />
+
+        <LandingFooter />
       </LandingLayout>
     </>
   );

@@ -73,7 +73,7 @@ const MenusLayout = ({ children }) => {
       <div className="drawer-side">
         <label htmlFor="drawer" className="drawer-overlay drawer-button" />
 
-        <ul className="menu bg-base-100 text-base-content w-80 overflow-y-auto">
+        <ul className="menu bg-base-100 text-base-content w-80">
           <li className="px-4 pt-4">
             <div className="flex w-full justify-end">
               <button onClick={() => setChecked(false)}>

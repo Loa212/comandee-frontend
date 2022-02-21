@@ -68,7 +68,6 @@ export async function getStaticProps({ params: { slug } }) {
       revalidate: 60,
     };
   } catch (error) {
-    alert(error);
     return null;
   }
 }
@@ -86,7 +85,6 @@ export async function getStaticPaths() {
       fallback: "blocking",
     };
   } catch (error) {
-    alert(error);
     return null;
   }
 }

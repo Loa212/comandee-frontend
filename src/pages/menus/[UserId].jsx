@@ -102,7 +102,7 @@ export async function getStaticProps({ params: { UserId } }) {
   // const products_res = await fetch(`${API_URL}/api/products?populate=image`)
   //const products = await products_res.json()
   const Menus_res = await fetch(
-    `${API_URL}/api/user-ids?populate[menus][populate][categories][populate][products][populate]=image&filters[uid][$eq]=${UserId}&filters[menus][id][$eq]=2`
+    `${API_URL}/api/user-ids?populate[menus][populate][categories][populate][products][populate]=image&filters[uid][$eq]=${UserId}`
   );
   const Menus = await Menus_res.json();
 

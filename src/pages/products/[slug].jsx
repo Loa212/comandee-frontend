@@ -21,14 +21,13 @@ const Product = ({ product }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="mx-auto max-w-sm space-y-4 px-4 pt-8">
-        <Link href={`/menus/${router.query.UserId}`} passHref>
+        <Link href={`/${router.query.UserId}/0`} passHref>
           <a className="flex items-center">
             <MdArrowBack className="mr-1 text-xl" /> indietro
           </a>
         </Link>
 
         <h3 className="text-4xl text-green-700">{product.attributes.name}</h3>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <div className="w-[300px] min-w-[300px]">
           <Image
             src={fromImageToUrl(product.attributes.image)}

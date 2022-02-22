@@ -7,25 +7,14 @@ import LandingDrawerLinks from "../components/LandingDrawerLinks";
 const MenusLayout = ({ children }) => {
   const router = useRouter();
 
-  const handleClick = (slug) => {
-    const path = router.asPath.split("#")[0];
-    router.push(`${path}/#${slug}`);
-    //close drawer
-    setChecked(false);
-  };
-
-  const [Checked, setChecked] = useState(false);
+  // const handleClick = (slug) => {
+  //   const path = router.asPath.split("#")[0];
+  //   router.push(`${path}/#${slug}`);
+  //   //close drawer
+  //   setChecked(false);
+  // };
 
   const [DrawerOpen, setDrawerOpen] = useState(false);
-
-  const handleDrawerChange = () => {
-    console.log("menuclick");
-    if (Checked) {
-      setChecked(false);
-    } else {
-      setChecked(true);
-    }
-  };
 
   return (
     <div
@@ -42,7 +31,6 @@ const MenusLayout = ({ children }) => {
               </div>
             </button>
           </div>
-
           <LandingDrawerLinks />
         </ul>
       </Drawer>

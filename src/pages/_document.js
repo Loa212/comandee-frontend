@@ -11,6 +11,23 @@ class MyDocument extends Document {
           />
         </Head>
         <body>
+          <div
+            className="very-important-stuff ;-) "
+            dangerouslySetInnerHTML={{
+              __html: `<!--
+
+─▄▀─▄▀
+──▀──▀
+█▀▀▀▀▀█▄
+█░░░░░█─█
+▀▄▄▄▄▄▀▀
+
+█▀▀ █▀▀█ █▀▀ █▀▀ █▀▀ 　 ▀█
+█░░ █░░█ █▀▀ █▀▀ █▀▀ 　 █▀
+▀▀▀ ▀▀▀▀ ▀   ▀   ▀▀▀ 　 ▄░
+-->`,
+            }}
+          />
           <Main />
           <NextScript />
         </body>

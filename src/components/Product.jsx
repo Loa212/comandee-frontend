@@ -4,25 +4,16 @@ import { fromImageToUrl } from "../../utils/fromImageToUrl";
 
 const Product = ({ product, UserId }) => {
   return (
-    <div className="my-2">
+    <div className="my-4">
       <Link
         href={`/products/${product.attributes.slug}?UserId=${UserId}`}
         passHref
       >
         <a>
-          <div className="flex justify-between space-x-2">
-            <div className="flexg flex flex-col justify-center space-y-2">
-              <p className="capitalize">{product.attributes.name}</p>
-              <p className="text-xs opacity-80">{product.attributes.content}</p>
-              {product.attributes.allergeni && (
-                <p className="text-xs opacity-60">
-                  allergeni: {product.attributes.allergeni}
-                </p>
-              )}
-            </div>
-
-            <div className="w-[120px] min-w-[120px] grow-0">
+          <div className="grid grid-cols-3 gap-x-2">
+            <div className="col-span-1  ">
               <Image
+                className="rounded-sm shadow-sm"
                 src={fromImageToUrl(product.attributes.image)}
                 alt="product image"
                 width="100%"
@@ -30,6 +21,25 @@ const Product = ({ product, UserId }) => {
                 layout="responsive"
                 objectFit="contain"
               />
+            </div>
+
+            <div className="col-span-2">
+              <div className="grid grid-cols-5 items-center gap-1">
+                <p className="col-span-4 text-sm capitalize">
+                  {product.attributes.name}
+                </p>
+                <p className="text-xxs col-span-1 capitalize">
+                  € {product.attributes.price.toFixed(2).replace(".", ",")}
+                </p>
+                <p className="text-xxs col-span-5 font-light italic opacity-80">
+                  {product.attributes.content}
+                </p>
+                {product.attributes.allergeni && (
+                  <p className="text-xxs col-span-5 h-min ">
+                    allergeni: {product.attributes.allergeni}
+                  </p>
+                )}
+              </div>
             </div>
           </div>
         </a>

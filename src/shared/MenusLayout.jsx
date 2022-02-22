@@ -59,7 +59,6 @@ const MenusLayout = ({ children }) => {
           />
         </ul>
       </Drawer>
-
       <div className="fixed z-10 flex w-full border-b-2 border-gray-700 border-opacity-10 bg-white shadow-md lg:mx-auto lg:max-w-5xl lg:border-0">
         <div className="mx-2 flex-1 px-2">
           <LanguagePicker
@@ -71,16 +70,15 @@ const MenusLayout = ({ children }) => {
 
         <div className="lg:hidden">
           <button
-            className="btn-ghost drawer-button mt-4 mr-2 mb-2 text-4xl "
+            className=" px-4 pt-4 pb-2 text-4xl "
             onClick={() => setDrawerOpen(true)}
           >
-            {/* <MdMenu /> */}
             <MdSearch />
           </button>
         </div>
       </div>
 
-      <div className="py-20">{children}</div>
+      <div className="w-screen py-20">{children}</div>
     </div>
   );
 };

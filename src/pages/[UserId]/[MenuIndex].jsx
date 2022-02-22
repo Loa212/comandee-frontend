@@ -63,7 +63,7 @@ const Menu = ({ Menus, MenuIndex }) => {
           {cenaCategories.map((category) => (
             <div key={category.attributes.slug}>
               <h3
-                className="text-center text-xl font-medium text-rose-700"
+                className="fixAnchor text-center text-xl font-medium text-rose-700"
                 id={category.attributes.slug}
               >
                 {category.attributes.name}

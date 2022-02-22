@@ -7,17 +7,17 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "Manrope": ["Manrope"],
+        Manrope: ["Manrope"],
+      },
+      fontSize: {
+        xxs: ["10px", "15px"],
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('daisyui'),
-  ],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
 
-   //configuring dasyUI
-   daisyui: {
+  //configuring dasyUI
+  daisyui: {
     styled: true,
     themes: false,
     base: true,
@@ -25,5 +25,4 @@ module.exports = {
     logs: false,
     rtl: false,
   },
-
-}
+};

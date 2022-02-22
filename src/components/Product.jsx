@@ -28,9 +28,11 @@ const Product = ({ product, UserId }) => {
                 <p className="col-span-4 text-sm capitalize">
                   {product.attributes.name}
                 </p>
-                <p className="text-xxs col-span-1 capitalize">
-                  € {product.attributes.price.toFixed(2).replace(".", ",")}
-                </p>
+                {product.attributes.price && (
+                  <p className="text-xxs col-span-5 h-min ">
+                    € {product.attributes.price.toFixed(2).replace(".", ",")}
+                  </p>
+                )}
                 <p className="text-xxs col-span-5 font-light italic opacity-80">
                   {product.attributes.content}
                 </p>

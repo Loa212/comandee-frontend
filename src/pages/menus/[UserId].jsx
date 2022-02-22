@@ -6,29 +6,30 @@ import { useRouter } from "next/router";
 import MenusLayout from "../../shared/MenusLayout";
 import MenuContext from "../../state/MenuContext";
 
-export default function UserId({ Menus }) {
-  const router = useRouter();
-  const menus = Menus.data[0].attributes.menus.data;
-  const cenaCategories = menus[1].attributes.categories.data;
-  const { MenuState, setMenuState } = useContext(MenuContext);
+// export default function UserId({ Menus }) {
+export default function UserId() {
+  // const router = useRouter();
+  // const menus = Menus.data[0].attributes.menus.data;
+  // const cenaCategories = menus[1].attributes.categories.data;
+  // const { MenuState, setMenuState } = useContext(MenuContext);
 
-  useEffect(() => {
-    if (MenuState.Loaded) {
-      return;
-    } else {
-      const drawerData = [];
-      cenaCategories.forEach((e) =>
-        drawerData.push({
-          title: e.attributes.name,
-          to: e.attributes.slug,
-        })
-      );
-      setMenuState({
-        Loaded: true,
-        data: drawerData,
-      });
-    }
-  }, [MenuState.Loaded, cenaCategories, setMenuState]);
+  // useEffect(() => {
+  //   if (MenuState.Loaded) {
+  //     return;
+  //   } else {
+  //     const drawerData = [];
+  //     cenaCategories.forEach((e) =>
+  //       drawerData.push({
+  //         title: e.attributes.name,
+  //         to: e.attributes.slug,
+  //       })
+  //     );
+  //     setMenuState({
+  //       Loaded: true,
+  //       data: drawerData,
+  //     });
+  //   }
+  // }, [MenuState.Loaded, cenaCategories, setMenuState]);
 
   return (
     <div className="hoverflow-behavior-contain">
@@ -38,7 +39,9 @@ export default function UserId({ Menus }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <MenusLayout>
+      <p>lol</p>
+
+      {/* <MenusLayout>
         <div className="space-y-4 text-center">
           <h1 className=" text-4xl font-bold text-green-700">
             Menu {menus[1].attributes.name}:
@@ -74,42 +77,42 @@ export default function UserId({ Menus }) {
             </div>
           ))}
         </div>
-      </MenusLayout>
+      </MenusLayout> */}
     </div>
   );
 }
 
-export async function getStaticPaths() {
-  try {
-    //retrieve all the possible paths
-    const users_res = await fetch(`${API_URL}/api/user-ids`);
-    const users = await users_res.json();
-    //return them to NextJs app
-    return {
-      paths: users.data.map((user) => ({
-        params: { UserId: String(user.attributes.uid) },
-      })),
-      fallback: false,
-    };
-  } catch (error) {
-    console.log(error);
-    return null;
-  }
-}
+// export async function getStaticPaths() {
+//   try {
+//     //retrieve all the possible paths
+//     const users_res = await fetch(`${API_URL}/api/user-ids`);
+//     const users = await users_res.json();
+//     //return them to NextJs app
+//     return {
+//       paths: users.data.map((user) => ({
+//         params: { UserId: String(user.attributes.uid) },
+//       })),
+//       fallback: false,
+//     };
+//   } catch (error) {
+//     console.log(error);
+//     return null;
+//   }
+// }
 
-export async function getStaticProps({ params: { UserId } }) {
-  //fetch products
-  // const products_res = await fetch(`${API_URL}/api/products?populate=image`)
-  //const products = await products_res.json()
-  const Menus_res = await fetch(
-    `${API_URL}/api/user-ids?populate[menus][populate][categories][populate][products][populate]=image&filters[uid][$eq]=${UserId}`
-  );
-  const Menus = await Menus_res.json();
+// export async function getStaticProps({ params: { UserId } }) {
+//   //fetch products
+//   // const products_res = await fetch(`${API_URL}/api/products?populate=image`)
+//   //const products = await products_res.json()
+//   const Menus_res = await fetch(
+//     `${API_URL}/api/user-ids?populate[menus][populate][categories][populate][products][populate]=image&filters[uid][$eq]=${UserId}`
+//   );
+//   const Menus = await Menus_res.json();
 
-  return {
-    props: {
-      Menus,
-    },
-    revalidate: 60,
-  };
-}
+//   return {
+//     props: {
+//       Menus,
+//     },
+//     revalidate: 60,
+//   };
+// }

@@ -10,7 +10,7 @@ const Menu = ({ Menus, MenuIndex }) => {
   const router = useRouter();
   console.log(Menus);
   const menus = Menus.data[0].attributes.menus.data;
-  const cenaCategories = menus[MenuIndex].attributes.categories.data;
+  const menuCategories = menus[MenuIndex].attributes.categories.data;
   const { MenuState, setMenuState } = useContext(MenuContext);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const Menu = ({ Menus, MenuIndex }) => {
       return;
     } else {
       const drawerData = [];
-      cenaCategories.forEach((e) =>
+      menuCategories.forEach((e) =>
         drawerData.push({
           title: e.attributes.name,
           to: e.attributes.slug,
@@ -29,7 +29,7 @@ const Menu = ({ Menus, MenuIndex }) => {
         data: drawerData,
       });
     }
-  }, [MenuState.Loaded, cenaCategories, setMenuState]);
+  }, [MenuState.Loaded, menuCategories, setMenuState]);
 
   return (
     <>
@@ -41,7 +41,7 @@ const Menu = ({ Menus, MenuIndex }) => {
 
       <MenusLayout>
         <div className="space-y-4 text-center">
-          <h1 className=" text-4xl font-bold text-gray-700 opacity-80">
+          <h1 className="pt-4 text-4xl font-bold text-gray-700 opacity-80">
             Menu:
           </h1>
 
@@ -59,11 +59,11 @@ const Menu = ({ Menus, MenuIndex }) => {
           </div>
         </div>
 
-        <div className="mx-auto max-w-xs space-y-6 pt-8 pb-9 text-lg">
-          {cenaCategories.map((category) => (
+        <div className="mx-auto max-w-xs space-y-6 pt-4 pb-9 text-lg">
+          {menuCategories.map((category) => (
             <div key={category.attributes.slug}>
               <h3
-                className="fixAnchor text-center text-xl font-medium text-rose-700"
+                className="fixAnchor pb-2 text-center text-xl font-medium text-rose-700"
                 id={category.attributes.slug}
               >
                 {category.attributes.name}

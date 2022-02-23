@@ -38,11 +38,11 @@ const MenusLayout = ({ children }) => {
   return (
     <div
       className={`border-b-2 border-gray-700 border-opacity-10 lg:mx-auto lg:max-w-sm lg:ring-2 lg:ring-gray-800 ${
-        DrawerOpen ? "fixed " : ""
+        DrawerOpen ? "absolute " : ""
       } `}
     >
       <Drawer DrawerOpen={DrawerOpen} setDrawerOpen={setDrawerOpen}>
-        <ul className="bg-base-100 w-[85vw] space-y-6 py-4 px-6 text-xl">
+        <ul className="w-[85vw] space-y-6 bg-gray-50 py-4 px-6 text-xl">
           <div className="mb-10 flex w-full justify-end">
             <button onClick={() => setDrawerOpen(false)}>
               <div className="flex items-center">
@@ -59,7 +59,7 @@ const MenusLayout = ({ children }) => {
           />
         </ul>
       </Drawer>
-      <div className="fixed z-10 flex w-full border-b-2 border-gray-700 border-opacity-10 bg-white shadow-md  lg:mx-auto lg:max-w-sm  lg:border-0">
+      <div className="fixed z-10 flex w-full border-b-2 border-gray-700 border-opacity-10 bg-gray-50 shadow-md  lg:mx-auto lg:max-w-sm  lg:border-0">
         <div className="mx-2 flex-1 px-2">
           <LanguagePicker
             Langs={Languages}
@@ -78,7 +78,9 @@ const MenusLayout = ({ children }) => {
         </div>
       </div>
 
-      <div className="w-screen py-20 lg:mx-auto lg:max-w-sm">{children}</div>
+      <div className="w-screen bg-gray-50 py-20 lg:mx-auto lg:max-w-sm">
+        {children}
+      </div>
     </div>
   );
 };

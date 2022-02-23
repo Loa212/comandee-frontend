@@ -20,30 +20,42 @@ const Product = ({ product }) => {
         )}
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="mx-auto max-w-sm space-y-4 px-4 pt-8">
+      <div className="mx-auto w-full  px-4 pt-8">
         <Link href={`/${router.query.UserId}/0`} passHref>
           <a className="flex items-center">
             <MdArrowBack className="mr-1 text-xl" /> indietro
           </a>
         </Link>
 
-        <h3 className="text-4xl text-green-700">{product.attributes.name}</h3>
-        <div className="w-[300px] min-w-[300px]">
-          <Image
-            src={fromImageToUrl(product.attributes.image)}
-            alt="product image"
-            width="100%"
-            height="100%"
-            layout="responsive"
-            objectFit="contain"
-          />
+        <div className="space-y-4">
+          <div className="py-8">
+            <Image
+              src={fromImageToUrl(product.attributes.image)}
+              alt="product image"
+              width="100%"
+              height="100%"
+              layout="responsive"
+              objectFit="contain"
+              className="rounded-xl"
+            />
+          </div>
+          <h3 className="text-4xl text-slate-700 opacity-80">
+            {product.attributes.name}
+          </h3>
+          {product.attributes.price && (
+            <p className="text-xl text-slate-700">
+              € {product.attributes.price.toFixed(2).replace(".", ",")}
+            </p>
+          )}
+          <article className="prose text-base italic text-slate-700">
+            {product.attributes.content}
+          </article>
+          {product.attributes.allergeni && (
+            <p className="text-sm opacity-80">
+              allergeni: {product.attributes.allergeni}
+            </p>
+          )}
         </div>
-        {product.attributes.price && (
-          <p className="text-lg">
-            € {product.attributes.price.toFixed(2).replace(".", ",")}
-          </p>
-        )}
-        <article className="prose">{product.attributes.content}</article>
       </div>
     </div>
   );

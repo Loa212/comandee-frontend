@@ -25,12 +25,15 @@ const Product = ({ product, UserId }) => {
 
             <div className="col-span-2">
               <div className="grid grid-cols-5 items-center gap-1">
-                <p className="col-span-4 text-sm capitalize">
+                <p className="col-span-4 text-sm font-medium capitalize opacity-80">
                   {product.attributes.name}
                 </p>
                 {product.attributes.price && (
-                  <p className="text-xxs col-span-5 h-min ">
-                    € {product.attributes.price.toFixed(2).replace(".", ",")}
+                  <p className="col-span-1 h-min text-xs font-medium opacity-80">
+                    €{" "}
+                    {product.attributes.price % 1 === 0
+                      ? product.attributes.price
+                      : product.attributes.price.toFixed(2).replace(".", ",")}
                   </p>
                 )}
                 <p className="text-xxs col-span-5 font-light italic opacity-80">

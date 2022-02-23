@@ -19,9 +19,11 @@ const MailingListCtaSection = () => {
               <input
                 type="text"
                 placeholder="la tua e-mail di lavoro"
-                className="input input-bordered"
+                className="input input-bordered w-full px-4 lg:w-auto lg:px-4"
               />
-              <button className="btn text-xs tracking-wider">Iscriviti</button>
+              <button className="btn w-full px-4 text-xs tracking-wider lg:w-auto lg:px-4">
+                Iscriviti
+              </button>
             </div>
             <p className="mt-2 px-8 text-center text-sm text-gray-300 opacity-60 md:text-left lg:px-2 lg:pr-10">
               Cliccando il tasto &quot;iscriviti&quot; accetti i termini e le

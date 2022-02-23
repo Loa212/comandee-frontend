@@ -37,7 +37,7 @@ const MenusLayout = ({ children }) => {
 
   return (
     <div
-      className={`border-b-2 border-gray-700 border-opacity-10  ${
+      className={`border-b-2 border-gray-700 border-opacity-10 lg:mx-auto lg:max-w-sm lg:ring-2 lg:ring-gray-800 ${
         DrawerOpen ? "fixed " : ""
       } `}
     >
@@ -59,7 +59,7 @@ const MenusLayout = ({ children }) => {
           />
         </ul>
       </Drawer>
-      <div className="fixed z-10 flex w-full border-b-2 border-gray-700 border-opacity-10 bg-white shadow-md lg:mx-auto lg:max-w-5xl lg:border-0">
+      <div className="fixed z-10 flex w-full border-b-2 border-gray-700 border-opacity-10 bg-white shadow-md  lg:mx-auto lg:max-w-sm  lg:border-0">
         <div className="mx-2 flex-1 px-2">
           <LanguagePicker
             Langs={Languages}
@@ -68,7 +68,7 @@ const MenusLayout = ({ children }) => {
           />
         </div>
 
-        <div className="lg:hidden">
+        <div className="">
           <button
             className=" px-4 pt-4 pb-2 text-4xl "
             onClick={() => setDrawerOpen(true)}
@@ -78,7 +78,7 @@ const MenusLayout = ({ children }) => {
         </div>
       </div>
 
-      <div className="w-screen py-20">{children}</div>
+      <div className="w-screen py-20 lg:mx-auto lg:max-w-sm">{children}</div>
     </div>
   );
 };

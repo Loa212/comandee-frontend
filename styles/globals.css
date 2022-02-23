@@ -11,11 +11,9 @@
 .hoverflow-behavior-contain {
   overscroll-behavior-y: contain;
 }
-
-/* body{
-    overflow-y: hidden;
-    overflow: contain;
-} */
+.bg-old-paper {
+  @apply bg-[#E0C9A6] bg-opacity-25;
+}
 
 .fixAnchor::before {
   display: block;

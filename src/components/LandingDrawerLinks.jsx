@@ -77,7 +77,7 @@ const LandingDrawerLinks = () => {
         <button className="btn-secondary  rounded-xl bg-[#5F54E2] px-6 py-3 font-bold hover:bg-[#3b31ac] lg:max-w-max ">
           <Link href={`/examples/gcr`} passHref>
             <a className="flex items-center text-white">
-              GCR example
+              Esempi menu
               <MdOpenInNew className="ml-2 text-lg" />
             </a>
           </Link>

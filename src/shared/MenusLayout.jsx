@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useContext, useState } from "react";
-import { MdClose, MdMenu, MdSearch } from "react-icons/md";
+import { MdArrowForward, MdClose, MdMenu, MdSearch } from "react-icons/md";
 import CategoryLink from "../components/CategoryLink.tsx";
 import Drawer from "../components/Drawer";
 import LanguagePicker from "../components/LanguagePicker.tsx";

@@ -10,7 +10,7 @@ const Product = ({ product }) => {
   console.log(product);
   const router = useRouter();
   return (
-    <div>
+    <div className="mx-auto max-w-md">
       <Head>
         {product.attributes.meta_title && (
           <title>{product.attributes.meta_title}</title>
@@ -27,8 +27,8 @@ const Product = ({ product }) => {
           </a>
         </Link>
 
-        <div className="space-y-4">
-          <div className="py-8">
+        <div className="space-y-3 px-4">
+          <div className="py-8 ">
             <Image
               src={fromImageToUrl(product.attributes.image)}
               alt="product image"
@@ -39,15 +39,15 @@ const Product = ({ product }) => {
               className="rounded-xl"
             />
           </div>
-          <h3 className="text-4xl text-slate-700 opacity-80">
+          <h3 className="text-2xl text-slate-700 opacity-80">
             {product.attributes.name}
           </h3>
           {product.attributes.price && (
-            <p className="text-xl text-slate-700">
+            <p className="text-lg text-slate-700">
               € {product.attributes.price.toFixed(2).replace(".", ",")}
             </p>
           )}
-          <article className="prose text-base italic text-slate-700">
+          <article className="prose text-sm italic text-slate-700">
             {product.attributes.content}
           </article>
           {product.attributes.allergeni && (
